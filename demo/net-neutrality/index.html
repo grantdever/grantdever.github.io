@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A short version of Promised vs. Delivered: Net Neutrality: summary, seven claims checked against the data, and the charts.">
+<title>The Internet Didn’t End. New Competitors Showed Up Instead.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f3f4f6;
+  --surface:#ffffff;
+  --surface-2:#e9ebef;
+  --ink:#0f1217;
+  --ink-2:#454b56;
+  --ink-3:#6b7280;
+  --rule:#d5d8de;
+  --grid:#e4e6ea;
+  --accent:#c2381c;
+  --accent-ink:#ffffff;
+  --s1:#2a78d6;
+  --s2:#eb6834;
+  --s3:#1baf7a;
+  --s4:#eda100;
+  --s-muted:#9aa1ad;
+  --bar-muted:#c9ced6;
+  --marker:#0f1217;
+  --v-c:#0f6b45; --v-c-bg:#e0f3e9;
+  --v-mc:#3f7a12; --v-mc-bg:#eef6e2;
+  --v-mx:#8a5300; --v-mx-bg:#fcf0d8;
+  --v-mw:#b0471a; --v-mw-bg:#fdeadf;
+  --v-w:#b42318; --v-w-bg:#fdebe9;
+  --v-u:#565d6b; --v-u-bg:#eceef2;
+  --vb-c:#0f7a4c; --vb-mc:#7cb342; --vb-mx:#e3a008; --vb-mw:#ea6b2d; --vb-w:#b42318; --vb-u:#8a91a0;
+  --shadow:0 1px 2px rgba(15,18,23,.06),0 4px 16px rgba(15,18,23,.05);
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-text:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#101216;
+    --surface:#181b21;
+    --surface-2:#22262e;
+    --ink:#f2f3f5;
+    --ink-2:#bfc4cc;
+    --ink-3:#8f96a1;
+    --rule:#2f343d;
+    --grid:#262a32;
+    --accent:#f0643f;
+    --accent-ink:#101216;
+    --s1:#3987e5;
+    --s2:#d95926;
+    --s3:#199e70;
+    --s4:#c98500;
+    --s-muted:#7c8491;
+    --bar-muted:#3d434e;
+    --marker:#f2f3f5;
+    --v-c:#5fd3a0; --v-c-bg:#12301f;
+    --v-mc:#a9d46e; --v-mc-bg:#222f13;
+    --v-mx:#f2b552; --v-mx-bg:#33270f;
+    --v-mw:#ffa070; --v-mw-bg:#3a2316;
+    --v-w:#ff8a7d; --v-w-bg:#3a1a17;
+    --v-u:#aeb4bf; --v-u-bg:#262a32;
+    --vb-c:#3fbf88; --vb-mc:#9ccf5c; --vb-mx:#f2c14e; --vb-mw:#f07a3a; --vb-w:#e5484d; --vb-u:#7c8491;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#101216;
+  --surface:#181b21;
+  --surface-2:#22262e;
+  --ink:#f2f3f5;
+  --ink-2:#bfc4cc;
+  --ink-3:#8f96a1;
+  --rule:#2f343d;
+  --grid:#262a32;
+  --accent:#f0643f;
+  --accent-ink:#101216;
+  --s1:#3987e5;
+  --s2:#d95926;
+  --s3:#199e70;
+  --s4:#c98500;
+  --s-muted:#7c8491;
+  --bar-muted:#3d434e;
+  --marker:#f2f3f5;
+  --v-c:#5fd3a0; --v-c-bg:#12301f;
+  --v-mc:#a9d46e; --v-mc-bg:#222f13;
+  --v-mx:#f2b552; --v-mx-bg:#33270f;
+  --v-mw:#ffa070; --v-mw-bg:#3a2316;
+  --v-w:#ff8a7d; --v-w-bg:#3a1a17;
+  --v-u:#aeb4bf; --v-u-bg:#262a32;
+  --vb-c:#3fbf88; --vb-mc:#9ccf5c; --vb-mx:#f2c14e; --vb-mw:#f07a3a; --vb-w:#e5484d; --vb-u:#7c8491;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.25);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-text);font-size:19px;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration-color:color-mix(in srgb,currentColor 40%,transparent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--s1);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--f-mono)}
+
+/* top bar */
+.topbar{border-bottom:1px solid var(--rule);background:var(--bg)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px}
+.series-tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.series-tag b{color:var(--ink);font-weight:500}
+.theme-btn{font-family:var(--f-mono);font-size:12px;background:transparent;color:var(--ink-2);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.theme-btn:hover{color:var(--ink);border-color:var(--ink-3)}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.kicker{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(38px,6.6vw,86px);line-height:.96;letter-spacing:-.035em;margin:0 0 26px;max-width:1040px;overflow-wrap:break-word}
+h1 .l2{display:block;color:var(--ink-2)}
+.thesis{font-size:clamp(20px,2.2vw,26px);line-height:1.42;max-width:860px;margin:0 0 10px;color:var(--ink)}
+.byline{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-3);margin:18px 0 0}
+
+/* timeline */
+.timeline{margin:44px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative;border-top:2px solid var(--ink)}
+.timeline li{position:relative;padding:18px 12px 0 0}
+.timeline li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ink)}
+.timeline li.key::before{background:var(--accent);border-color:var(--accent)}
+.timeline .t-date{font-family:var(--f-mono);font-size:12.5px;font-weight:500;letter-spacing:.02em;display:block;margin-bottom:4px}
+.timeline .t-ev{font-family:var(--f-display);font-size:15px;line-height:1.3;display:block}
+.timeline .t-src{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);display:inline-block;margin-top:6px}
+.tl-note{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);margin:18px 0 0;max-width:900px}
+
+/* stat tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden;margin:48px 0 0}
+.tile{background:var(--surface);padding:22px 20px 20px;display:flex;flex-direction:column;gap:8px}
+.tile .t-label{font-family:var(--f-display);font-weight:600;font-size:15px;line-height:1.25}
+.tile .t-big{font-family:var(--f-display);font-weight:800;font-size:clamp(32px,3.6vw,44px);line-height:1;letter-spacing:-.03em}
+.tile .t-big small{font-size:.45em;font-weight:600;letter-spacing:0;color:var(--ink-2)}
+.tile .t-sub{font-family:var(--f-mono);font-size:12px;line-height:1.5;color:var(--ink-2);margin-top:auto}
+.tile .t-tag{align-self:flex-start;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+.tile.counter .t-tag{background:var(--v-mx-bg);color:var(--v-mx)}
+
+/* sections */
+section.block{padding:72px 0 8px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:28px;max-width:820px}
+.sec-num{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+h2{font-family:var(--f-display);font-weight:800;font-size:clamp(32px,4.4vw,52px);line-height:1;letter-spacing:-.03em;margin:0}
+.sec-head p{margin:6px 0 0;color:var(--ink-2)}
+h3{font-family:var(--f-display);font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:18px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:20px 20px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;min-width:0}
+.card.sup,.card.lap{border-top:3px solid var(--ink)}
+.card.lap{border-top-style:dashed}
+.card[hidden]{display:none}
+.card-top{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{font-family:var(--f-mono);font-size:11.5px;line-height:1;padding:5px 9px;border-radius:999px;white-space:nowrap}
+.chip.cat{background:var(--surface-2);color:var(--ink-2)}
+.chip.v{font-weight:500}
+.chip.v-c{background:var(--v-c-bg);color:var(--v-c)}
+.chip.v-mc{background:var(--v-mc-bg);color:var(--v-mc)}
+.chip.v-mx{background:var(--v-mx-bg);color:var(--v-mx)}
+.chip.v-mw{background:var(--v-mw-bg);color:var(--v-mw)}
+.chip.v-w{background:var(--v-w-bg);color:var(--v-w)}
+.chip.v-u{background:var(--v-u-bg);color:var(--v-u)}
+.chip .g{margin-right:5px}
+.side{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 0 auto}
+.card blockquote{margin:0;font-size:19px;line-height:1.42;font-style:italic;font-weight:400;overflow-wrap:break-word}
+.card blockquote p{margin:0}
+.card blockquote p::before{content:"\201C"}
+.card blockquote p::after{content:"\201D"}
+.qnote{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);margin:-4px 0 0}
+.who{font-family:var(--f-display);font-size:14.5px;line-height:1.35;margin:0}
+.who strong{font-weight:600}
+.who .role{color:var(--ink-2)}
+.who .meta{display:block;font-family:var(--f-mono);font-size:12px;color:var(--ink-3);margin-top:3px}
+.what{border-top:1px solid var(--rule);padding-top:12px}
+.what h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 6px}
+.what p{margin:0;font-size:16.5px;line-height:1.5}
+.what .credit{font-family:var(--f-mono);font-size:12px;color:var(--ink);margin-top:8px}
+.what .ev{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);margin-top:8px;line-height:1.5}
+.empty{font-family:var(--f-mono);font-size:13px;color:var(--ink-3);padding:24px 0}
+
+/* charts */
+.charts{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.fig{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:22px 22px 16px;min-width:0;margin:0}
+.fig-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:10px 20px;margin-bottom:6px}
+.fig-head .fh-text{max-width:720px}
+.fig-kicker{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 6px}
+.fig-dek{color:var(--ink-2);font-size:16.5px;margin:6px 0 0;line-height:1.45}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--f-mono);font-size:12px;color:var(--ink-2);margin:12px 0 4px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{display:inline-block;width:18px;height:0;border-top:2px solid}
+.sw.dash{border-top-style:dashed}
+.sw.dot{width:10px;height:10px;border:2px solid;border-radius:50%;background:var(--surface)}
+.sw.bar{width:11px;height:11px;border:0;border-radius:2px}
+.sw.mk{width:0;height:14px;border:0;border-left:1.5px dashed var(--marker)}
+.sw.ref{border-top:1.5px dashed var(--ink-3)}
+.plot{position:relative;width:100%;min-height:240px;margin-top:4px}
+.plot svg{display:block;overflow:visible;max-width:100%}
+.plot svg:focus{outline:none}
+.plot svg:focus-visible{outline:2px solid var(--s1);outline-offset:4px}
+.grid{stroke:var(--grid);stroke-width:1}
+.baseline{stroke:var(--ink-3);stroke-width:1}
+.tick{stroke:var(--ink-3);stroke-width:1}
+.axis-t{font-family:var(--f-mono);font-size:11px;fill:var(--ink-3)}
+.mk-line{stroke:var(--marker);stroke-width:1.25;stroke-dasharray:4 3}
+.mk-line.soft{stroke:var(--ink-3);stroke-dasharray:2 3}
+.mk-t{font-family:var(--f-mono);font-size:11px;fill:var(--ink)}
+.mk-t.soft{fill:var(--ink-3)}
+.ref-line{stroke:var(--ink-3);stroke-width:1.25;stroke-dasharray:5 4}
+.ref-t{font-family:var(--f-mono);font-size:11px;fill:var(--ink-2);paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
+.dlabel{font-family:var(--f-mono);font-size:11.5px;fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
+.dlabel.sub{fill:var(--ink-2)}
+.na-t{font-family:var(--f-mono);font-size:10px;fill:var(--ink-3)}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.ln.dash{stroke-dasharray:6 4}
+.ln.s1{stroke:var(--s1)} .ln.s2{stroke:var(--s2)} .ln.s3{stroke:var(--s3)} .ln.s4{stroke:var(--s4)} .ln.muted{stroke:var(--s-muted)}
+.pt{stroke-width:2}
+.pt.hollow{fill:var(--surface)}
+.pt.s1{stroke:var(--s1)} .pt.s2{stroke:var(--s2)} .pt.s3{stroke:var(--s3)} .pt.s4{stroke:var(--s4)} .pt.muted{stroke:var(--s-muted)}
+.pt.fill.s1{fill:var(--s1)} .pt.fill.s2{fill:var(--s2)} .pt.fill.s3{fill:var(--s3)} .pt.fill.s4{fill:var(--s4)} .pt.fill.muted{fill:var(--s-muted)}
+.pt.fill{stroke:var(--surface)}
+.br.s1{fill:var(--s1)} .br.s3{fill:var(--s3)} .br.muted{fill:var(--bar-muted)}
+.xh{stroke:var(--ink-3);stroke-width:1}
+.hov{stroke:var(--surface);stroke-width:2}
+.hov.s1{fill:var(--s1)} .hov.s2{fill:var(--s2)} .hov.s3{fill:var(--s3)} .hov.s4{fill:var(--s4)} .hov.muted{fill:var(--s-muted)}
+.tip{position:absolute;top:0;left:0;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow);padding:9px 11px;font-family:var(--f-mono);font-size:12px;line-height:1.45;min-width:150px;max-width:250px;opacity:0;transition:opacity .12s ease;z-index:3}
+.tip.on{opacity:1}
+.tip .tt{font-weight:500;margin-bottom:4px;color:var(--ink)}
+.tip .tr{display:flex;align-items:center;gap:7px;color:var(--ink-2)}
+.tip .tr b{color:var(--ink);font-weight:500;margin-left:auto;padding-left:10px;white-space:nowrap}
+.tip .tn{color:var(--ink-3);font-size:11px;margin-top:4px}
+.tip i{display:inline-block;width:8px;height:8px;border-radius:2px;flex:none}
+.fig-foot{display:flex;flex-direction:column;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--rule);font-family:var(--f-mono);font-size:11.5px;line-height:1.55;color:var(--ink-3)}
+.fig-foot p{margin:0}
+.fig-foot strong{color:var(--ink-2);font-weight:500}
+details.tbl{margin-top:4px}
+details.tbl summary{cursor:pointer;font-family:var(--f-mono);font-size:12px;color:var(--ink-2);padding:4px 0}
+.tbl-scroll{overflow-x:auto;max-height:320px;overflow-y:auto;border:1px solid var(--rule);border-radius:8px;margin-top:6px}
+.tbl-scroll table{border-collapse:collapse;width:100%;font-family:var(--f-mono);font-size:12px}
+.tbl-scroll th,.tbl-scroll td{padding:5px 10px;text-align:right;border-bottom:1px solid var(--grid);white-space:nowrap}
+.tbl-scroll th:first-child,.tbl-scroll td:first-child{text-align:left}
+.tbl-scroll thead th{position:sticky;top:0;background:var(--surface-2);color:var(--ink-2);font-weight:500}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:2px;padding:3px;background:var(--surface-2);border-radius:999px}
+.tabs button{font-family:var(--f-display);font-weight:600;font-size:13.5px;border:0;background:transparent;color:var(--ink-2);padding:6px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.panel[hidden]{display:none}
+
+/* prose grids */
+.conf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:2px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.conf article{background:var(--surface);padding:20px 20px 22px}
+.conf h3{font-size:19px;margin-bottom:8px}
+.conf p{margin:0;font-size:16.5px;line-height:1.5;color:var(--ink-2)}
+.conf p + p{margin-top:8px}
+.conf .src{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);margin-top:10px;overflow-wrap:anywhere}
+.sub-h{font-family:var(--f-display);font-weight:800;font-size:clamp(24px,2.8vw,32px);letter-spacing:-.02em;line-height:1.1;margin:48px 0 8px}
+.sub-p{color:var(--ink-2);max-width:820px;margin:0 0 20px}
+.throttle{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:18px}
+.throttle article{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--v-mx);border-radius:10px;padding:18px 20px}
+.throttle h3{font-size:19px;margin-bottom:8px}
+.throttle p{margin:0 0 8px;font-size:16.5px;line-height:1.5;color:var(--ink-2)}
+.throttle .verdict-line{font-family:var(--f-mono);font-size:12px;color:var(--ink);margin:10px 0 0;overflow-wrap:anywhere}
+.pull{font-family:var(--f-display);font-size:clamp(20px,2.4vw,26px);font-weight:600;line-height:1.3;letter-spacing:-.01em;border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:0 0 30px;max-width:820px}
+.watch{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:2px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.watch li{background:var(--surface);padding:16px 20px 18px;line-height:1.45}
+.watch b{display:block;font-family:var(--f-display);font-weight:600;font-size:17px;margin-bottom:4px}
+.watch span{display:block;font-size:16px;line-height:1.5;color:var(--ink-2)}
+
+/* methods */
+.methods-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.ds{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.ds li{padding:14px 0;border-bottom:1px solid var(--rule)}
+.ds .ds-name{font-family:var(--f-display);font-weight:600;font-size:16px}
+.ds .ds-use{font-size:15.5px;color:var(--ink-2);margin:3px 0 4px;line-height:1.45}
+.ds .ds-meta{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);line-height:1.6;overflow-wrap:anywhere}
+.prose p{margin:0 0 14px;font-size:17px;color:var(--ink-2)}
+.prose h3{margin:22px 0 8px}
+.prose h3:first-child{margin-top:0}
+.prose ul{margin:0 0 14px;padding-left:20px;font-size:16.5px;color:var(--ink-2)}
+.prose li{margin-bottom:6px}
+.dl-box{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px 20px;margin-top:8px}
+.dl-box p{margin:0 0 10px;font-size:16px}
+.dl-box ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--f-mono);font-size:12.5px;overflow-wrap:anywhere}
+.dl-box a::before{content:"\2193 ";color:var(--accent)}
+
+footer{margin-top:88px;border-top:2px solid var(--ink);padding:22px 0 48px}
+footer p{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-2);margin:0 0 6px}
+
+@media (max-width: 960px){
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:26px;border-top:0}
+  .timeline li{border-top:2px solid var(--ink)}
+  .methods-grid,.throttle{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 620px){
+  body{font-size:18px}
+  .wrap{padding:0 16px}
+  .hero{padding:40px 0 28px}
+  .timeline{grid-template-columns:minmax(0,1fr);row-gap:0;border-top:0;border-left:2px solid var(--ink);margin-left:6px}
+  .timeline li{border-top:0;padding:0 0 18px 20px}
+  .timeline li::before{top:3px;left:-7px}
+  .tiles{grid-template-columns:minmax(0,1fr)}
+  .fig{padding:16px 14px 12px}
+  .card{padding:16px}
+  .card blockquote{font-size:18px}
+  section.block{padding-top:56px}
+  .series-tag{font-size:11px;letter-spacing:.05em}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+/* v3 additions */
+.intro{font-size:19px;line-height:1.55;max-width:780px;color:var(--ink-2);margin:16px 0 0}
+.howto{max-width:780px;margin:18px 0 0;padding:12px 16px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:16.5px;line-height:1.5;color:var(--ink-2)}
+.howto b{font-family:var(--f-display);font-weight:600;color:var(--ink)}
+.count{font-family:var(--f-mono);font-size:13px;color:var(--ink-2);margin:0 0 18px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.card.sup{border-top:3px solid var(--ink)}
+.also{margin:32px 0 0;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+.also h3{font-size:19px;margin:0 0 10px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.also h3 span{font-family:var(--f-mono);font-size:11.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.also ul{list-style:none;margin:0;padding:0}
+.also li{padding:7px 0;border-top:1px solid var(--grid);font-size:16px;line-height:1.45;color:var(--ink-2);overflow-wrap:break-word}
+.also li:first-child{border-top:0}
+.also li b{font-family:var(--f-display);font-weight:600;color:var(--ink)}
+.also li a{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);margin-left:4px}
+.panel-h{font-family:var(--f-display);font-weight:600;font-size:16px;line-height:1.3;margin:16px 0 0}
+.inset{margin-top:22px;padding-top:16px;border-top:1px dashed var(--rule)}
+.inset h4{font-family:var(--f-display);font-weight:600;font-size:18px;line-height:1.25;margin:0}
+.inset .fig-dek{font-size:15.5px}
+.plot.short{min-height:260px}
+.inset .plot{min-height:200px}
+.twin{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.twin .panel-h{margin-top:4px}
+.note-card{background:var(--surface-2);border-radius:10px;padding:14px 16px;margin:16px 0 4px}
+.note-card h4{font-family:var(--f-display);font-weight:600;font-size:16.5px;margin:0 0 6px}
+.note-card p{margin:0;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.note-card .src{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);margin-top:8px;overflow-wrap:anywhere}
+.conf article.wide{grid-column:1/-1}
+.conf a{text-decoration-color:color-mix(in srgb,currentColor 40%,transparent)}
+.closing{max-width:780px}
+.closing p{margin:0 0 16px;font-size:19px;line-height:1.55}
+.closing p:first-child{font-family:var(--f-display);font-size:clamp(20px,2.2vw,24px);font-weight:600;line-height:1.35;letter-spacing:-.01em}
+.dl-box{align-self:start}
+@media (max-width: 960px){
+  .twin{grid-template-columns:minmax(0,1fr)}
+}
+.qls{display:inline-flex;flex-wrap:wrap;gap:4px;margin-right:4px;vertical-align:1px}
+.ql{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.03em;line-height:1;padding:3px 7px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.ql:hover{color:var(--ink);border-color:var(--ink-3)}
+.ql-off{background:var(--surface-2);border-color:var(--surface-2)}
+.ql-ip{color:var(--v-mx);border-color:currentColor}
+.ql-rec{border-style:dashed;border-color:var(--ink-3)}
+.ql-ind{border-style:dotted;border-color:var(--ink-3)}
+.sm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:6px}
+.sm{min-width:0}
+.sm-h{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);margin:6px 0 0}
+.sm .plot{min-height:220px}
+@media (max-width: 760px){.sm-grid{grid-template-columns:minmax(0,1fr);gap:4px}}
+</style>
+<style>
+/* Promised vs. Delivered short pages: one visual identity for No. 1 (net neutrality) and No. 2
+   (Fannie and Freddie). Injected by both build.py files after the series stylesheet from
+   net-neutrality/page.html, so it overrides that sheet on the short pages only; the full pages
+   do not load this file. Keep the copies in both branches byte-identical.
+   Black ink on white, 13px floor for words, mono only in SVG chart text and data tables,
+   square tags, thin rules instead of boxes. Light only: the dark palette was never reviewed. */
+
+/* ---- tokens (selectors match the series sheet's dark-mode rules so these win in every mode) ---- */
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"]{
+  color-scheme:light;
+  --bg:#ffffff; --surface:#ffffff; --surface-2:#f6f5f2;
+  --ink:#000000; --ink-2:#000000; --ink-3:#2a2e35;
+  --rule:#000000; --hair:#d9d9d9; --grid:#e3e3e3;
+  --accent:#c2381c; --accent-ink:#ffffff;
+  /* Series slots, validated light-only with the dataviz palette validator (surface #fff):
+     s1 navy (the subject/incumbent), s1-light its second member, s2 dark green and s3 light green
+     (the two challengers), s4 the page accent, kept for the one series that carries a chart's point.
+     Context and reference series are gray. Each page maps meanings to these slots in its own sheet. */
+  --s1:#1d4fa8; --s1-light:#6b93d6; --s2:#1a7340; --s3:#5aa328; --s4:#c2381c;
+  --s-muted:#8a8f99; --bar-muted:#cfd2d8; --marker:#000000;
+  --dash:5 4;  /* one dash pattern: dashed means "not a measured value" (reference level, event marker, linked estimate) */
+  --shadow:none;
+}
+body{background:var(--bg);color:var(--ink);font:19px/1.55 var(--f-text)}
+a{color:inherit;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-color:currentColor;text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:0}
+.plot svg:focus-visible{outline:2px solid var(--accent)}
+.theme-btn{display:none}
+
+/* ---- top bar ---- */
+.topbar{border-bottom:1px solid var(--rule);background:var(--bg)}
+.series-tag{font-family:var(--f-display);font-weight:600;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.series-tag b{font-weight:800}
+
+/* ---- hero ---- */
+.hero{padding:48px 0 8px}
+.kicker{font-family:var(--f-display);font-weight:600;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-size:clamp(36px,5.2vw,64px);line-height:1;letter-spacing:-.03em;margin:0 0 24px;max-width:1000px}
+h1 .l2{display:block;color:var(--ink)}
+.standfirst{font-family:var(--f-text);font-size:22px;line-height:1.45;max-width:760px;margin:0 0 18px;color:var(--ink)}
+.byline{font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:.01em;color:var(--ink);margin:0;padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--hair);max-width:760px}
+.howto{max-width:760px;margin:14px 0 0;padding:0;border:0;background:none;border-radius:0;font-family:var(--f-text);font-style:italic;font-size:17px;line-height:1.5;color:var(--ink)}
+.summary{max-width:760px;margin-top:22px}
+.summary p{margin:0 0 16px;font-size:19px;line-height:1.55;color:var(--ink)}
+
+/* ---- sections ---- */
+section.block{padding:48px 0 0}
+.sec-head{max-width:760px;margin-bottom:22px;gap:8px}
+h2{font-size:34px;line-height:1.05;letter-spacing:-.02em}
+.sec-head p{color:var(--ink);font-size:17px}
+
+/* ---- claim cards: square tag, thin rules, no boxes; two columns, an odd last card spans both ---- */
+.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 48px;align-items:start;max-width:1000px}
+.card{background:none;border:0;border-top:2px solid var(--rule);border-radius:0;box-shadow:none;padding:14px 0 0;gap:12px}
+.card.sup,.card.lap,.card.opp{border-top:2px solid var(--rule)}
+.card-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{display:inline-block;font-family:var(--f-display);font-weight:600;font-size:13px;line-height:1;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none;border:1px solid var(--ink);border-radius:0;padding:5px 8px 4px;white-space:nowrap}
+.card blockquote{font-size:21px;line-height:1.4;color:var(--ink)}
+.who{font-family:var(--f-display);font-size:15px;color:var(--ink)}
+.who strong{font-weight:700}
+.who .role{color:var(--ink)}
+.who .role::before{content:"\2014\00a0"}
+.who .meta{font-family:var(--f-display);font-weight:400;font-size:14px;color:var(--ink);margin-top:3px}
+.what{border-top:1px solid var(--hair);padding-top:12px}
+.what h4{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+.what p{font-size:18px;line-height:1.5;color:var(--ink);margin:0 0 6px}
+.what .ev{font-family:var(--f-display);font-size:14px;line-height:1.5;color:var(--ink);margin:8px 0 0}
+.what .ev a[href^="#"]{font-weight:700}
+.parts{margin:0;padding:0;list-style:none;font-size:18px;line-height:1.5}
+.parts li{margin:0 0 6px}
+.parts b{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+@media (min-width:761px){
+  .cards>.card:last-child:nth-child(odd){grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:48px;row-gap:12px;align-content:start}
+  .cards>.card:last-child:nth-child(odd)>.what{grid-column:2;grid-row:1/span 3;border-top:0;padding-top:0}
+  .cards>.card:last-child:nth-child(odd)>:not(.what){grid-column:1}
+}
+
+/* ---- charts as article figures ---- */
+.charts{gap:48px;max-width:1000px}
+.fig{background:none;border:0;border-top:2px solid var(--rule);border-radius:0;box-shadow:none;padding:12px 0 0}
+.fig-head .fh-text{max-width:760px}
+.fig-kicker{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+.fig h3{font-family:var(--f-display);font-weight:700;font-size:22px;line-height:1.2;color:var(--ink)}
+.fig-dek{font-size:17px;line-height:1.5;color:var(--ink)}
+.panel-h{font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--ink)}
+.legend{font-family:var(--f-display);font-weight:400;font-size:14px;color:var(--ink);gap:6px 18px}
+.sw{border-top-width:2.5px}
+.sw.dash{border-top-style:dashed}
+.sw.bar{border-radius:0}
+.sw.ref{border-top:1.5px dashed var(--s-muted)}
+.sw.mk{border-left:1.5px dashed var(--marker)}
+.axis-t,.mk-t,.ref-t,.dlabel,.na-t{font-size:12px;fill:var(--ink)}
+.ref-t{fill:var(--ink)}
+.dlabel.sub,.mk-t.soft{fill:var(--ink)}
+.ln{stroke-width:2.5}
+.ln.dash{stroke-dasharray:var(--dash)}
+.ref-line{stroke:var(--s-muted);stroke-width:1.25;stroke-dasharray:var(--dash)}
+.mk-line{stroke:var(--marker);stroke-width:1.25;stroke-dasharray:var(--dash)}
+.pt.fill{r:4}
+.grid{stroke:var(--grid)}
+.baseline,.tick{stroke:#000}
+.fig-foot{border-top:1px solid var(--hair);font-family:var(--f-display);font-weight:400;font-size:14px;line-height:1.55;color:var(--ink-3)}
+.fig-foot strong{color:var(--ink);font-weight:700}
+.qls{gap:6px;margin-right:6px}
+.ql{font-family:var(--f-display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:0;background:none;border:1px solid var(--ink);color:var(--ink)}
+.ql-off,.ql-ip,.ql-co{background:none;border-color:var(--ink);color:var(--ink)}
+details.tbl summary{font-family:var(--f-display);font-size:14px;color:var(--ink)}
+.tbl-scroll{border:1px solid var(--hair);border-radius:0}
+.tbl-scroll thead th{color:var(--ink)}
+.tip{font-family:var(--f-display);font-size:13.5px;border:1px solid var(--rule);border-radius:0;box-shadow:none}
+.tip .tr{color:var(--ink)}
+.tip .tr b{font-weight:700}
+.tip .tn{color:var(--ink);font-size:13px}
+.tip i{border-radius:0}
+
+/* ---- footer ---- */
+footer,footer.foot{margin-top:72px;border-top:2px solid var(--rule);padding:20px 0 48px;font-family:var(--f-display);font-size:14px;color:var(--ink)}
+footer p{font-family:var(--f-display);font-size:14px;color:var(--ink);margin:0}
+
+@media (max-width:760px){
+  .cards{grid-template-columns:minmax(0,1fr);gap:32px}
+  .twin{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  .wrap{padding:0 16px}
+  .series-tag .long{display:none}
+  .hero{padding:32px 0 4px}
+  .standfirst{font-size:20px}
+  h2{font-size:28px}
+  .card blockquote{font-size:19px}
+  .fig{padding:12px 0 0}
+}
+
+/* ---- print: a clean PDF to attach ---- */
+@media print{
+  @page{margin:16mm 14mm}
+  body{font-size:11.5pt}
+  .topbar,.theme-btn,details.tbl,.tip{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .hero{padding-top:0}
+  h1{font-size:30pt}
+  section.block{padding-top:18pt}
+  .cards{grid-template-columns:minmax(0,1fr);gap:16pt}
+  .cards>.card:last-child:nth-child(odd){display:flex}
+  .card,.fig{break-inside:avoid}
+  .charts{gap:18pt}
+  a{text-decoration:none}
+  footer,footer.foot{margin-top:24pt}
+}
+
+/* Net neutrality only: one color per meaning across every chart. The chart script tags each
+   series with a role on this page (see S() in page.html); the shared sheet supplies the slots.
+   cable = navy (Comcast; Charter takes the lighter tint), fiber = dark green, fwa = light green,
+   accent = the one series carrying a chart's point (real capex), ctx = gray context series. */
+:root{--c-cable:var(--s1);--c-cable2:var(--s1-light);--c-fiber:var(--s2);--c-fwa:var(--s3);--c-accent:var(--s4);--c-ctx:var(--s-muted)}
+.ln.cable,.pt.hollow.cable{stroke:var(--c-cable)} .pt.fill.cable,.br.cable,.hov.cable{fill:var(--c-cable)}
+.ln.cable2,.pt.hollow.cable2{stroke:var(--c-cable2)} .pt.fill.cable2,.br.cable2,.hov.cable2{fill:var(--c-cable2)}
+.ln.fiber,.pt.hollow.fiber{stroke:var(--c-fiber)} .pt.fill.fiber,.br.fiber,.hov.fiber{fill:var(--c-fiber)}
+.ln.fwa,.pt.hollow.fwa{stroke:var(--c-fwa)} .pt.fill.fwa,.br.fwa,.hov.fwa{fill:var(--c-fwa)}
+.ln.accent,.pt.hollow.accent{stroke:var(--c-accent)} .pt.fill.accent,.br.accent,.hov.accent{fill:var(--c-accent)}
+.ln.ctx,.pt.hollow.ctx{stroke:var(--c-ctx)} .pt.fill.ctx,.hov.ctx{fill:var(--c-ctx)} .br.ctx{fill:var(--bar-muted)}
+/* Only the repeal marker: hide the state-law (CA SB 822) marker the shared chart code draws. */
+.mk-line.soft,.mk-t.soft{display:none}
+</style>
+</head>
+<body>
+<main>
+<div class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <h1 id="title">The Internet Didn&rsquo;t End. <span class="l2">New Competitors Showed Up Instead.</span></h1>
+    <p class="standfirst">In the years since the FCC repealed its 2015 net neutrality rules, American broadband has become faster, more widely adopted and more competitive. According to the FCC&rsquo;s own measurements, cable download speeds rose from <span data-finding="F138">150.8</span> Mbps in 2018 to <span data-finding="F139">401.2</span> Mbps in 2022, while the share of households with a broadband subscription of any type grew from <span data-finding="F125">85.1%</span> in 2018 to <span data-finding="F090">93.2%</span> in 2024.</p>
+    <p class="byline">Grant Dever &middot; October 2026</p>
+    <div class="summary">
+      <p>The new connections went largely to challengers rather than to cable. Fiber connections nearly tripled to <span data-finding="F025">35.99</span> million by June 2025, and fiber and fixed wireless together grew from <span data-finding="F057">14%</span> of home connections in December 2017 to <span data-finding="F058">37%</span> in June 2025, while cable connections plateaued near <span data-finding="F027">74.5</span> million in 2021&ndash;22. In 2025 alone, T-Mobile, Verizon and AT&amp;T added <span data-finding="F049">3.92</span> million fixed-wireless customers as Comcast and Charter lost <span data-finding="F050">1.12</span> million. Between June 2023 and June 2025, the share of households with three or more providers offering 100/20 Mbps service rose from <span data-finding="F008">27.8%</span> to <span data-finding="F009">43.3%</span>.</p>
+      <p>Consumers did not end up paying more for less. Cable revenue per customer rose <span data-finding="F121">33&ndash;35%</span> in nominal dollars, slightly faster than inflation, but the Bureau of Labor Statistics&rsquo; quality-adjusted price index for internet service fell <span data-finding="F016">14.8%</span> after inflation, and Comcast&rsquo;s and Charter&rsquo;s real revenue per customer has slipped since 2021. Our search of the FCC&rsquo;s 2024 order and the Free Press violations list found no paid fast lane, no pay-for-play deal and no major ISP blocking lawful websites.</p>
+      <p>Investment is the weakest part of the record. After inflation, broadband capital spending from 2018 to 2025 averaged within <span data-finding="F072">1%</span> of its 2017 level, and 2025 alone was <span data-finding="F073">8.3%</span> below it, so the national totals do not show the increase the FCC predicted. Fiber builders, meanwhile, set records for new homes passed in every year from 2022 (according to the Fiber Broadband Association).</p>
+    </div>
+  </section>
+
+  <section class="block" id="predictions" aria-labelledby="h-pred">
+    <div class="sec-head">
+      <h2 id="h-pred">The scorecard</h2>
+      <p>We selected seven well-known predictions about the repeal, four from opponents and three from supporters. They are not a random sample.</p>
+    </div>
+    <div class="cards" id="qcards"></div>
+  </section>
+
+  <section class="block" id="data" aria-labelledby="h-data">
+    <div class="sec-head">
+      <h2 id="h-data">The record</h2>
+    </div>
+
+    <div class="charts">
+      <figure class="fig" id="c-speed">
+        <div class="fig-head"><div class="fh-text">
+          <p class="fig-kicker">Chart A &middot; Speed</p>
+          <h3>Cable speeds kept climbing after the repeal</h3>
+          <p class="fig-dek">According to the FCC, measured cable download speeds grew about <span data-finding="F136">28%</span> a year both before the repeal (2015&ndash;17) and after it (2018&ndash;22), reaching <span data-finding="F139">401.2</span> Mbps in 2022, the last year the FCC published the series.</p>
+        </div></div>
+        <div class="plot" id="p-mba"><div class="tip" role="status"></div></div>
+        <div class="fig-foot">
+          <p class="src-line"><span class="qls"><span class="ql ql-off">Official statistic</span></span> <strong>Source:</strong> <a href="https://data.fcc.gov/download/measuring-broadband-america/">FCC Measuring Broadband America</a>, cable panel, mean download at peak hours, September of each year.</p>
+          <details class="tbl"><summary>Show data table</summary><div class="tbl-scroll"></div></details>
+        </div>
+      </figure>
+
+      <figure class="fig" id="c-connect">
+        <div class="fig-head"><div class="fh-text">
+          <p class="fig-kicker">Chart B &middot; How Americans connect</p>
+          <h3>Fiber and fixed wireless grew as copper faded</h3>
+          <p class="fig-dek">Fiber connections nearly tripled to <span data-finding="F025">35.99</span> million by June 2025, while copper and DSL connections shrank to <span data-finding="F026">6.6</span> million and cable connections plateaued near <span data-finding="F027">74.5</span> million in 2021&ndash;22 (home broadband connections by technology, in millions).</p>
+        </div></div>
+        <div class="legend" aria-hidden="true">
+          <span><i class="sw" style="border-color:var(--c-cable)"></i>Cable</span>
+          <span><i class="sw" style="border-color:var(--c-fiber)"></i>Fiber</span>
+          <span><i class="sw" style="border-color:var(--c-fwa)"></i>Fixed wireless: FCC count, and T-Mobile + Verizon (company-reported)</span>
+          <span><i class="sw" style="border-color:var(--c-ctx)"></i>DSL and copper</span>
+          <span><i class="sw" style="border-color:var(--c-ctx)"></i>Satellite, all providers</span>
+        </div>
+        <div class="plot" id="p-connect"><div class="tip" role="status"></div></div>
+        <div class="fig-foot">
+          <p class="src-line"><span class="qls"><span class="ql ql-off">Official statistic</span><span class="ql ql-co">Company-reported</span></span> <strong>Source:</strong> FCC Internet Access Services reports, <a href="https://docs.fcc.gov/public/attachments/DOC-395960A1.pdf">Dec 2021</a> and <a href="https://docs.fcc.gov/public/attachments/DOC-421557A1.pdf">June 2025</a> editions; T-Mobile and Verizon earnings releases (SEC Form 8-K).</p>
+          <details class="tbl" data-for="p-connect"><summary>Show data table</summary><div class="tbl-scroll"></div></details>
+        </div>
+      </figure>
+
+      <figure class="fig" id="c-netadds">
+        <div class="fig-head"><div class="fh-text">
+          <p class="fig-kicker">Chart C &middot; Who&rsquo;s adding customers</p>
+          <h3>Wireless carriers are adding home internet customers as cable loses them</h3>
+          <p class="fig-dek">In 2025, T-Mobile, Verizon and AT&amp;T added <span data-finding="F049">3.92</span> million fixed-wireless customers, while Comcast and Charter together lost <span data-finding="F050">1.12</span> million (quarterly net customer additions, in thousands).</p>
+        </div></div>
+        <div class="legend" aria-hidden="true">
+          <span><i class="sw bar" style="background:var(--c-fwa)"></i>Fixed wireless: T-Mobile + Verizon + AT&amp;T</span>
+          <span><i class="sw bar" style="background:var(--c-cable)"></i>Cable: Comcast + Charter</span>
+        </div>
+        <div class="plot"><div class="tip" role="status"></div></div>
+        <div class="fig-foot">
+          <p class="src-line"><span class="qls"><span class="ql ql-co">Company-reported</span></span> <strong>Source:</strong> T-Mobile, Verizon, AT&amp;T, Comcast and Charter earnings releases (SEC Form 8-K).</p>
+          <details class="tbl"><summary>Show data table</summary><div class="tbl-scroll"></div></details>
+        </div>
+      </figure>
+
+      <figure class="fig" id="c-compprice">
+        <div class="fig-head"><div class="fh-text">
+          <p class="fig-kicker">Chart D &middot; Competition and prices</p>
+          <h3>As challengers gained share, cable&rsquo;s real revenue per customer stopped rising</h3>
+          <p class="fig-dek">Fiber and fixed wireless grew from <span data-finding="F057">14%</span> of home connections in December 2017 to <span data-finding="F058">37%</span> in June 2025. After inflation, Comcast&rsquo;s and Charter&rsquo;s revenue per customer peaked in 2021 and then slipped. The timing lines up, although it does not by itself show that competition caused the decline.</p>
+        </div></div>
+        <h4 class="panel-h">Share of residential connections, %</h4>
+        <div class="legend" aria-hidden="true">
+          <span><i class="sw" style="border-color:var(--c-fiber)"></i>Fiber + fixed wireless</span>
+          <span><i class="sw" style="border-color:var(--c-cable)"></i>Cable</span>
+        </div>
+        <div class="plot" id="p-share"><div class="tip" role="status"></div></div>
+        <h4 class="panel-h">After inflation, 2017 = 100</h4>
+        <div class="legend" aria-hidden="true">
+          <span><i class="sw" style="border-color:var(--c-cable)"></i>Comcast revenue per customer</span>
+          <span><i class="sw dash" style="border-color:var(--c-cable)"></i>Comcast 2025, linked to old basis</span>
+          <span><i class="sw" style="border-color:var(--c-cable2)"></i>Charter revenue per customer</span>
+          <span><i class="sw" style="border-color:var(--c-ctx)"></i>CPI internet (quality-adjusted), context</span>
+          <span><i class="sw ref"></i>Inflation (= 100)</span>
+        </div>
+        <div class="plot" id="p-price"><div class="tip" role="status"></div></div>
+        <div class="fig-foot">
+          <p class="src-line"><span class="qls"><span class="ql ql-off">Official statistic</span><span class="ql ql-co">Company-reported</span></span> <strong>Source:</strong> FCC Internet Access Services reports; Comcast and Charter Form 10-K, 2017&ndash;2025; BLS <a href="https://data.bls.gov/timeseries/CUUR0000SEEE03">CUUR0000SEEE03</a> and CPI-U.</p>
+          <details class="tbl"><summary>Show data table</summary><div class="tbl-scroll"></div></details>
+        </div>
+      </figure>
+
+      <figure class="fig" id="c-invest">
+        <div class="fig-head"><div class="fh-text">
+          <p class="fig-kicker">Chart E &middot; Investment</p>
+          <h3>More fiber was built, while investment stayed roughly flat after inflation</h3>
+          <p class="fig-dek">Fiber passings roughly tripled between 2016 and 2025, with record new passings each year from 2022 according to the Fiber Broadband Association. After inflation, broadband capital spending from 2018 to 2025 averaged within <span data-finding="F072">1%</span> of its 2017 level, and 2025 alone was <span data-finding="F073">8.3%</span> below it.</p>
+        </div></div>
+        <div class="twin">
+          <div>
+            <h4 class="panel-h">Fiber homes passed, millions</h4>
+            <div class="plot" id="p-fiber"><div class="tip" role="status"></div></div>
+          </div>
+          <div>
+            <h4 class="panel-h">Capital spending, $B</h4>
+            <div class="legend" aria-hidden="true">
+              <span><i class="sw bar" style="background:var(--bar-muted)"></i>In dollars</span>
+              <span><i class="sw" style="border-color:var(--c-accent)"></i>In 2017 dollars</span>
+              <span><i class="sw ref"></i>2017 level</span>
+            </div>
+            <div class="plot" id="p-capex"><div class="tip" role="status"></div></div>
+          </div>
+        </div>
+        <div class="fig-foot">
+          <p class="src-line"><span class="qls"><span class="ql ql-ip">Industry estimate (interested party)</span></span> <strong>Source:</strong> Fiber Broadband Association / RVA releases; USTelecom Broadband Capex reports, <a href="https://ustelecom.org/wp-content/uploads/2024/10/UST-1376-CAPEX-Report_2024_4-as-of-Oct-4.pdf">2023</a>, <a href="https://ustelecom.org/research/2024-broadband-capex-report/">2024</a>, <a href="https://ustelecom.org/research/2025-broadband-capex/">2025</a>.</p>
+          <details class="tbl"><summary>Show data table</summary><div class="tbl-scroll"></div></details>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Prototype by Grant Dever, for discussion</p>
+  </div>
+</footer>
+
+<script id="nn-data" type="application/json">{"speedMba":[[2015,53.8,54.0],[2016,73.6,65.1],[2017,87.7,69.1],[2018,150.8,76.8],[2019,175.9,106.4],[2020,199.1,133.1],[2021,276.0,182.9],[2022,401.2,257.2]],"speedTier":[["2018-12",100.0],["2019-12",100.0],["2020-12",150.0],["2021-12",200.0],["2022-06",300.0],["2022-12",300.0],["2023-06",300.0],["2023-12",400.0],["2024-06",500.0],["2024-12",500.0],["2025-06",500.0]],"speedMlab":[[2020,63.12],[2021,84.28],[2022,107.5],[2023,113.03]],"cpiAnnual":[[2017,100.0,100.0,100.0,12],[2018,99.2,102.4,96.9,12],[2019,100.7,104.3,96.6,12],[2020,102.2,105.6,96.8,12],[2021,103.7,110.5,93.8,12],[2022,105.4,119.4,88.3,12],[2023,109.3,124.3,87.9,12],[2024,112.5,128.0,87.9,12],[2025,112.0,131.3,85.2,11],[2026,114.9,135.3,84.9,8]],"arpu":[["Comcast",2017,"A_legacy_HSI",55.98,55.98],["Comcast",2018,"A_legacy_HSI",58.36,56.97],["Comcast",2019,"A_legacy_HSI",60.7,58.2],["Comcast",2020,"A_legacy_HSI",62.75,59.43],["Comcast",2021,"A_legacy_HSI",66.14,59.83],["Comcast",2022,"A_legacy_HSI",68.66,57.51],["Comcast",2023,"A_legacy_HSI",71.33,57.38],["Comcast",2024,"A_legacy_HSI",73.94,57.78],["Comcast",2023,"B_recast_2025",69.95,56.28],["Comcast",2024,"B_recast_2025",72.34,56.53],["Comcast",2025,"B_recast_2025",74.13,56.44],["Charter",2017,"A",53.54,53.54],["Charter",2018,"A",54.83,53.53],["Charter",2019,"A",57.24,54.88],["Charter",2020,"A",59.44,56.3],["Charter",2021,"A",63.74,57.66],["Charter",2022,"A",65.49,54.86],["Charter",2023,"A",67.4,54.22],["Charter",2024,"A",68.81,53.77],["Charter",2025,"A",71.14,54.17]],"capex":[[2012,69.6,74.3],[2013,76.0,80.0],[2014,78.0,80.8],[2015,77.5,80.1],[2016,74.8,76.4],[2017,76.9,76.9],[2018,80.0,78.1],[2019,80.8,77.5],[2020,79.4,75.2],[2021,86.0,77.8],[2022,102.4,85.8],[2023,94.7,76.2],[2024,89.6,70.0],[2025,92.6,70.5]],"fiber":[[2016,30.0],[2018,40.8],[2019,49.2],[2021,60.5],[2022,68.0],[2023,78.0],[2024,88.1],[2025,98.3]],"acs":[[2016,81.4,67.3,10.4],[2017,83.5,68.8,11.0],[2018,85.1,69.6,11.6],[2019,86.4,70.8,11.8],[2021,90.1,75.5,10.9],[2022,91.0,75.9,11.2],[2023,92.1,76.3,11.9],[2024,93.2,76.5,12.6]],"connect":[["2017-12",61.57,12.7,21.73,1.16,1.69,98.85],["2018-06",62.32,13.66,20.75,1.27,1.75,99.76],["2018-12",63.81,14.21,20.21,1.34,1.79,101.35],["2019-06",65.46,15.41,19.04,1.41,1.81,103.12],["2019-12",67.14,16.01,18.24,1.52,1.8,104.7],["2020-06",70.71,16.97,17.72,1.69,1.82,108.91],["2020-12",72.54,18.38,16.98,1.96,1.75,111.62],["2021-06",73.84,19.41,16.34,2.25,1.73,113.58],["2021-12",74.6,21.53,15.27,2.7,1.69,115.79],["2022-06",74.45,22.96,13.99,3.42,1.84,116.65],["2022-12",74.54,24.47,13.09,4.5,1.95,118.56],["2023-06",73.9,26.26,11.86,5.69,1.93,119.64],["2023-12",73.39,28.04,10.63,6.81,2.04,120.9],["2024-06",72.56,30.47,9.72,7.82,2.17,122.74],["2024-12",70.07,33.5,8.01,8.52,2.58,122.68],["2025-06",69.25,35.99,6.6,9.84,2.91,124.58]],"netAdds":[["2022Q1",338,194,0,264,185],["2022Q2",560,256,0,3,-21],["2022Q3",578,342,0,19,75],["2022Q4",524,379,0,-23,105],["2023Q1",523,393,0,5,76],["2023Q2",509,384,2,-19,77],["2023Q3",557,384,24,-18,63],["2023Q4",541,375,67,-34,-61],["2024Q1",405,354,110,-65,-72],["2024Q2",406,378,139,-120,-149],["2024Q3",415,363,135,-87,-110],["2024Q4",428,373,158,-139,-177],["2025Q1",424,308,181,-199,-60],["2025Q2",454,278,203,-226,-117],["2025Q3",506,261,270,-104,-109],["2025Q4",495,319,221,-181,-119]],"carrierFwa":[["2021-06",0.37],["2021-12",0.87],["2022-06",2.24],["2022-12",4.1],["2023-06",5.94],["2023-12",7.84],["2024-06",9.4],["2024-12",11.0],["2025-06",12.42],["2025-12",14.18]],"comp":[["2023-06",5.4,30.0,36.8,27.8,7.8,47.7,38.7,5.8],["2023-12",4.7,28.3,37.6,29.4,7.1,46.4,40.2,6.2],["2024-06",3.9,24.7,35.6,35.8,6.6,44.7,41.7,7.0],["2024-12",3.4,22.2,34.8,39.5,6.1,42.7,43.1,8.1],["2025-06",3.0,20.0,33.6,43.3,5.7,40.6,44.3,9.4]],"starlink":[["2022-12",1.0,"p"],["2023-05",1.5,"p"],["2023-12",2.3,"f"],["2024-03",2.6,"p"],["2024-09",4.0,"p"],["2024-12",4.4,"f"],["2025-03",5.0,"f"],["2025-06",6.0,"p"],["2025-08",7.0,"p"],["2025-11",8.0,"p"],["2025-12",8.9,"f"],["2026-02",10.0,"p"],["2026-03",10.3,"f"],["2026-06",12.0,"f"]],"predictions":[{"id":"senatedems","side":"opp","v":"dh","q":"If we don't save net neutrality, you'll get the internet one word at a time. #savethenet #savetheinternet #netneutrality #onemorevote","who":"Senate Democrats","role":"Official caucus account (@SenateDems), on X","date":"Feb 27, 2018","url":"https://twitter.com/SenateDems/status/968525820410122240","note":"Posted one word per line.","what":"Speeds rose instead. According to the FCC’s Measuring Broadband America program, measured cable download speeds went from 150.8 Mbps in 2018 to 401.2 Mbps in 2022. The Washington Post Fact Checker gave the tweet Three Pinocchios.","ev":[["Chart A","#c-speed"],["Washington Post, Mar 5, 2018","https://www.washingtonpost.com/news/fact-checker/wp/2018/03/05/will-the-fccs-net-neutrality-repeal-grind-the-internet-to-a-halt/"]],"findings":[["150.8","F138"],["401.2","F139"]]},{"id":"schumer","side":"opp","v":"ne","q":"If Net Neutrality is eliminated, the Internet may start to resemble a toll road, with the highest bidders cruising along private 'fast lanes' while the rest of us inch along a single, traffic-choked public lane. We could be forced to purchase internet packages much like cable packages, paying more for popular sites.","who":"Sen. Chuck Schumer","role":"Senate minority leader (D-N.Y.), floor remarks","date":"Dec 14, 2017","url":"https://www.democrats.senate.gov/es/sala-de-prensa/schumer-floor-remarks-on-year-end-negotiations-the-republican-tax-bill-and-the-fcc-vote-on-net-neutrality","note":"Hedged: “may” and “could.”","what":"A search of the FCC’s 2024 order and the Free Press violations list (through 2023) found no documented paid fast lane sold to websites and no cable-style packages of websites. That is a search’s limit, not proof; ISPs also faced California’s law and the threat of new federal rules.","ev":[["FCC 24-52","https://docs.fcc.gov/public/attachments/FCC-24-52A1.pdf"],["Free Press list","https://www.freepress.net/blog/net-neutrality-violations-history-abuse"]]},{"id":"pelosi","side":"opp","v":"mx","q":"[T]oday’s dangerous rule change saddles consumers with higher costs and less choice, throttles competition and punishes entrepreneurs and small businesses.","who":"Rep. Nancy Pelosi","role":"House minority leader (D-Calif.), statement","date":"Dec 14, 2017","url":"https://pelosi.house.gov/news/press-releases/pelosi-statement-on-net-neutrality-ruling","note":"","what":"Consumers saw more choice, not less, as the share of households with three or more 100/20 Mbps providers rose from 27.8% to 43.3% between June 2023 and June 2025. Cable revenue per customer rose 33–35% in nominal dollars (our calculation from company 10-K filings), slightly faster than inflation, while the Bureau of Labor Statistics’ quality-adjusted price index for internet service fell 14.8% after inflation.","ev":[["FCC 26-55, Fig. 4","https://docs.fcc.gov/public/attachments/FCC-26-55A1.pdf"],["Chart D","#c-compprice"]],"findings":[["27.8%","F008"],["43.3%","F009"],["14.8%","F016"],["33–35%","F121"]]},{"id":"rosenworcel","side":"opp","v":"mx","q":"They will have the power to block websites, throttle services, and censor online content. They will have the right to discriminate and favor the internet traffic of those companies with whom they have pay-for-play arrangements and the right to consign all others to a slow and bumpy road.","who":"Jessica Rosenworcel","role":"FCC commissioner, dissenting statement","date":"Dec 14, 2017","url":"https://docs.fcc.gov/public/attachments/FCC-17-166A6.pdf","note":"Describes powers ISPs would have.","what":"Mobile carriers were already slowing some video by source while the 2015 rules were in force. In a peer-reviewed study of tests run from January 2018 to January 2019, Northeastern University researchers found AT&T throttled Netflix in about 70% of tests, NBC Sports in 71% and YouTube in 74%, and report that these policies were in place before the rules ended in June 2018. Our search found no pay-for-play deal and no major ISP blocking websites.","ev":[["Li et al., SIGCOMM 2019","https://wehe.meddle.mobi/papers/wehe.pdf"],["FCC 24-52","https://docs.fcc.gov/public/attachments/FCC-24-52A1.pdf"]],"findings":[["70%","F122"],["71%","F123"],["74%","F124"]]},{"id":"pai-break","side":"sup","v":"h","q":"Returning to the legal framework that governed the Internet from President Clinton's pronouncement in 1996 until 2015 is not going to destroy the Internet. It is not going to end the Internet as we know it. It is not going to kill democracy. It is not going to stifle free expression online.","who":"Ajit Pai","role":"FCC chairman, statement at the repeal vote","date":"Dec 14, 2017","url":"https://docs.fcc.gov/public/attachments/FCC-17-166A2.pdf","note":"","what":"The internet did not end. Broadband adoption (any type) rose from 85.1% of households in 2018 to 93.2% in 2024, measured cable speeds increased 2.7-fold between 2018 and 2022, and our search found no major ISP blocking lawful websites. The FCC’s 2024 order, since struck down, argued the “perceived lack of examples” of harm was “more likely evidence in favor of the effectiveness of open Internet regulation and enforcement.”","ev":[["Census ACS S2801","#c-subsidy"],["Chart A","#c-speed"],["FCC 24-52, ¶478","https://docs.fcc.gov/public/attachments/FCC-24-52A1.pdf"]],"findings":[["93.2%","F090"],["85.1%","F125"],["2.7","F140"]]},{"id":"pai-competition","side":"sup","v":"mx","q":"Third, it will boost competition. … So if we want to encourage smaller competitors to enter into the broadband marketplace or expand, we must end Title II.","who":"Ajit Pai","role":"FCC chairman, speech at the Newseum","date":"Apr 26, 2017","url":"https://docs.fcc.gov/public/attachments/DOC-344590A1.pdf","note":"","what":"Choice increased. The share of households with three or more providers offering 100/20 Mbps service (wired or fixed wireless) rose from 27.8% in June 2023 to 43.3% in June 2025. Wired only, 5.8% to 9.4%, so most of the gain was fixed wireless from the big carriers, by our reading (Chart C). The FCC data don’t break out small ISPs, so that part can’t be tested.","ev":[["FCC 26-55, Fig. 4","https://docs.fcc.gov/public/attachments/FCC-26-55A1.pdf"],["Chart C","#c-netadds"]],"findings":[["27.8%","F008"],["43.3%","F009"],["5.8%","F010"],["9.4%","F011"]]},{"id":"order-invest","side":"sup","v":"mx","q":"We determine that this light-touch information service framework will promote investment and innovation better than applying costly and restrictive laws of a bygone era to broadband Internet access service.","who":"Restoring Internet Freedom Order","role":"FCC 17-166, ¶2","date":"Dec 14, 2017","url":"https://docs.fcc.gov/public/attachments/FCC-17-166A1.pdf","note":"","what":"The national totals do not show a clear increase. After inflation, broadband capital spending from 2018 to 2025 averaged within 1% of its 2017 level, and spending in 2025 was 8.3% below it. In nominal dollars, capital spending hit $102.4B in 2022, the highest since 2001, and was $92.6B in 2025. Most of the 2022–24 dip coincided with Verizon’s C-band program and T-Mobile’s merger integration winding down. National totals can’t show how Title II would have compared.","ev":[["USTelecom 2022","https://ustelecom.org/research/2022-broadband-capex/"],["2025","https://ustelecom.org/research/2025-broadband-capex/"],["Chart E","#c-invest"]],"findings":[["1%","F072"],["8.3%","F073"],["$102.4B","F127"],["2001","F128"],["$92.6B","F129"]]}]}</script>
+<script id="quick-data" type="application/json">{"_about": "Quick version (quick.html): verbatim excerpts of each card's quote (q) and 'What happened' text (why) in predictions.json. build.py fails if any excerpt is not an exact substring. Cards render in this file's key order (sides alternate).", "senatedems": {"q": ["If we don't save net neutrality, you'll get the internet one word at a time."], "why": ["Speeds rose instead. According to the FCC’s Measuring Broadband America program, measured cable download speeds went from 150.8 Mbps in 2018 to 401.2 Mbps in 2022."]}, "pai-break": {"q": ["Returning to the legal framework that governed the Internet from President Clinton's pronouncement in 1996 until 2015 is not going to destroy the Internet. It is not going to end the Internet as we know it."], "why": ["The internet did not end. Broadband adoption (any type) rose from 85.1% of households in 2018 to 93.2% in 2024, measured cable speeds increased 2.7-fold between 2018 and 2022, and our search found no major ISP blocking lawful websites."]}, "schumer": {"q": ["If Net Neutrality is eliminated, the Internet may start to resemble a toll road, with the highest bidders cruising along private 'fast lanes'", "We could be forced to purchase internet packages much like cable packages, paying more for popular sites."], "why": ["A search of the FCC’s 2024 order and the Free Press violations list (through 2023) found no documented paid fast lane sold to websites and no cable-style packages of websites."]}, "pai-competition": {"q": ["So if we want to encourage smaller competitors to enter into the broadband marketplace or expand, we must end Title II."], "why": ["Choice increased. The share of households with three or more providers offering 100/20 Mbps service (wired or fixed wireless) rose from 27.8% in June 2023 to 43.3% in June 2025."]}, "pelosi": {"q": ["[T]oday’s dangerous rule change saddles consumers with higher costs and less choice, throttles competition and punishes entrepreneurs and small businesses."], "why": ["Consumers saw more choice, not less, as the share of households with three or more 100/20 Mbps providers rose from 27.8% to 43.3% between June 2023 and June 2025. Cable revenue per customer rose 33–35% in nominal dollars (our calculation from company 10-K filings), slightly faster than inflation, while the Bureau of Labor Statistics’ quality-adjusted price index for internet service fell 14.8% after inflation."]}, "order-invest": {"q": ["We determine that this light-touch information service framework will promote investment and innovation"], "why": ["The national totals do not show a clear increase. After inflation, broadband capital spending from 2018 to 2025 averaged within 1% of its 2017 level, and spending in 2025 was 8.3% below it."]}, "rosenworcel": {"q": ["They will have the power to block websites, throttle services, and censor online content. They will have the right to discriminate and favor the internet traffic of those companies with whom they have pay-for-play arrangements"], "why": ["Mobile carriers were already slowing some video by source while the 2015 rules were in force. In a peer-reviewed study of tests run from January 2018 to January 2019, Northeastern University researchers found AT&T throttled Netflix in about 70% of tests, NBC Sports in 71% and YouTube in 74%, and report that these policies were in place before the rules ended in June 2018. Our search found no pay-for-play deal and no major ISP blocking websites."]}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById("nn-data").textContent);
+
+  /* ---------- theme toggle ---------- */
+  var root = document.documentElement, themeBtn = document.getElementById("themeBtn");
+  var modes = ["auto","light","dark"], mode = "auto";
+  try { var saved = localStorage.getItem("pvd-theme"); if (saved && modes.indexOf(saved) > -1) mode = saved; } catch (e) {}
+  function applyTheme(){
+    if (mode === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", mode);
+    themeBtn.textContent = "Theme: " + mode;
+  }
+  if (themeBtn) {  /* the short version has no theme button and is light only */
+    themeBtn.addEventListener("click", function(){
+      mode = modes[(modes.indexOf(mode) + 1) % modes.length];
+      try { localStorage.setItem("pvd-theme", mode); } catch (e) {}
+      applyTheme();
+    });
+    applyTheme();
+  }
+
+  /* ---------- scorecard ---------- */
+  var VKEYS = ["h","dh","mx","ne"];
+  var VERD = {
+    h: {label:"Happened", glyph:"✓", cls:"v-c"},
+    dh: {label:"Didn’t happen", glyph:"✕", cls:"v-w"},
+    mx: {label:"Mixed", glyph:"≈", cls:"v-mx"},
+    ne: {label:"No evidence found", glyph:"?", cls:"v-u"}
+  };
+  var SIDE_TAG = {opp:"Opponent", sup:"Supporter"};
+  var P = DATA.predictions;
+
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function card(p){
+    var a = el("article","card " + p.side);
+    a.dataset.id = p.id;
+    var top = el("div","card-top");
+    var vc = el("span","chip v " + VERD[p.v].cls); var g = el("span","g", VERD[p.v].glyph); g.setAttribute("aria-hidden","true");
+    vc.appendChild(g); vc.appendChild(document.createTextNode(VERD[p.v].label)); top.appendChild(vc);
+    top.appendChild(el("span","side", SIDE_TAG[p.side]));
+    a.appendChild(top);
+    var bq = el("blockquote"); bq.cite = p.url; bq.appendChild(el("p", null, p.q)); a.appendChild(bq);
+    if (p.note) a.appendChild(el("p","qnote", p.note));
+    var who = el("p","who");
+    who.appendChild(el("strong", null, p.who));
+    who.appendChild(document.createTextNode(" "));
+    who.appendChild(el("span","role", "— " + p.role));
+    var meta = el("span","meta");
+    meta.appendChild(document.createTextNode(p.date + " · "));
+    var src = el("a", null, "Original ↗"); src.href = p.url; src.rel = "noopener"; src.target = "_blank";
+    meta.appendChild(src); who.appendChild(meta); a.appendChild(who);
+    var w = el("div","what");
+    w.appendChild(el("h4", null, "What happened"));
+    w.appendChild(el("p", null, p.what));
+    var ev = el("p","ev"); ev.appendChild(document.createTextNode("Evidence: "));
+    p.ev.forEach(function(e, i){
+      if (i) ev.appendChild(document.createTextNode(" · "));
+      var l = el("a", null, e[0]); l.href = e[1];
+      if (e[1].charAt(0) !== "#") { l.rel = "noopener"; l.target = "_blank"; }
+      ev.appendChild(l);
+    });
+    w.appendChild(ev); a.appendChild(w);
+    return a;
+  }
+
+  var cardsBox = document.getElementById("cards");
+  if (cardsBox) P.forEach(function(p){ cardsBox.appendChild(card(p)); });
+  (function(){
+    function summary(side){
+      return VKEYS.map(function(k){
+        var n = P.filter(function(p){ return p.side === side && p.v === k; }).length;
+        return n ? n + " " + VERD[k].label.toLowerCase() : null;
+      }).filter(Boolean).join(", ");
+    }
+    var countEl = document.getElementById("count");
+    if (!countEl) return;  /* the quick version shows no verdict tally */
+    countEl.textContent = "Opponents: " + summary("opp") + ". Supporters: " + summary("sup") + ".";
+  })();
+
+  /* ---------- tabs (generic) ---------- */
+  function tabset(tabIds, panelIds, onSelect){
+    var tabs = tabIds.map(function(id){ return document.getElementById(id); });
+    var panels = panelIds.map(function(id){ return document.getElementById(id); });
+    function sel(i){
+      tabs.forEach(function(t, j){ t.setAttribute("aria-selected", i === j ? "true" : "false"); t.tabIndex = i === j ? 0 : -1; panels[j].hidden = i !== j; });
+      if (onSelect) onSelect(i);
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener("click", function(){ sel(i); });
+      t.addEventListener("keydown", function(ev){
+        if (ev.key === "ArrowRight" || ev.key === "ArrowLeft") { var n = (i + (ev.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length; sel(n); tabs[n].focus(); }
+      });
+    });
+  }
+
+  /* ---------- charts ---------- */
+  if (typeof d3 === "undefined") {
+    document.querySelectorAll(".plot").forEach(function(p){ p.insertAdjacentHTML("beforeend", '<p class="empty">Chart library failed to load. Open the data table below.</p>'); });
+    return;
+  }
+  var ym = function(s){ var a = s.split("-"); return new Date(+a[0], +a[1] - 1, 1); };
+  var midY = function(y){ return new Date(y, 6, 1); };
+  var qDate = function(q){ return new Date(+q.slice(0, 4), (+q.slice(5) - 1) * 3 + 1, 15); };
+  var REPEAL = new Date(2018, 5, 11);
+  var CA = new Date(2021, 1, 15);
+  var fMonth = d3.timeFormat("%b %Y");
+  var f1 = d3.format(",.1f"), f2 = d3.format(",.2f"), f0 = d3.format(",d");
+
+  function withGaps(pts, maxGapDays){
+    var out = [];
+    pts.forEach(function(p, i){
+      if (i && (p.d - pts[i-1].d) / 864e5 > maxGapDays) out.push({d:new Date((+p.d + +pts[i-1].d) / 2), v:null});
+      out.push(p);
+    });
+    return out;
+  }
+
+  /* bar from value edge yv to baseline yb, rounding only the data end */
+  function barPath(x0, yv, yb, w, r){
+    var h = Math.abs(yb - yv); r = Math.max(0, Math.min(r, w / 2, h));
+    if (yv <= yb) return "M" + x0 + "," + yb + "V" + (yv + r) + "Q" + x0 + "," + yv + " " + (x0 + r) + "," + yv +
+      "H" + (x0 + w - r) + "Q" + (x0 + w) + "," + yv + " " + (x0 + w) + "," + (yv + r) + "V" + yb + "Z";
+    return "M" + x0 + "," + yb + "V" + (yv - r) + "Q" + x0 + "," + yv + " " + (x0 + r) + "," + yv +
+      "H" + (x0 + w - r) + "Q" + (x0 + w) + "," + yv + " " + (x0 + w) + "," + (yv - r) + "V" + yb + "Z";
+  }
+
+  function table(host, head, rows){
+    var t = "<table><thead><tr>" + head.map(function(h){ return "<th scope=\"col\">" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      rows.map(function(r){ return "<tr>" + r.map(function(c, i){ return i ? "<td>" + (c == null ? "—" : c) + "</td>" : "<th scope=\"row\">" + c + "</th>"; }).join("") + "</tr>"; }).join("") +
+      "</tbody></table>";
+    host.querySelector(".tbl-scroll").innerHTML = t;
+  }
+
+  /* cfg: x[2], y[2], yFmt, lines[{cls,pts,name,fmt,dots,dash}], points[], bars[{cls,pts,name,fmt,off}], barDays, barFrac,
+          refs[{v,t}], labels[], annual, na[], tipTitle, aria */
+  function Chart(scope, cfg){
+    var plot = scope.classList.contains("plot") ? scope : scope.querySelector(".plot"), tip = plot.querySelector(".tip");
+    var hoverDates = [];
+    var keyed = [];
+    (cfg.lines || []).concat(cfg.points || [], cfg.bars || []).forEach(function(s){
+      var m = new Map();
+      s.pts.forEach(function(p){ if (p.v != null && !p.skipTip) { m.set(+p.d, p); hoverDates.push(+p.d); } });
+      keyed.push({s:s, m:m});
+    });
+    hoverDates = Array.from(new Set(hoverDates)).sort(function(a, b){ return a - b; });
+    var idx = -1;
+
+    function draw(){
+      var W = plot.clientWidth; if (!W) return;
+      var narrow = W < 560;
+      var H = cfg.h ? (narrow ? cfg.h[1] : cfg.h[0]) : (narrow ? 280 : 360);
+      var m = {t:cfg.top || 40, r:narrow ? 14 : 24, b:28, l:cfg.left || (narrow ? 40 : 50)};
+      d3.select(plot).select("svg").remove();
+      var svg = d3.select(plot).insert("svg", ".tip").attr("width", W).attr("height", H)
+        .attr("viewBox", "0 0 " + W + " " + H).attr("role", "img").attr("aria-label", cfg.aria).attr("tabindex", 0);
+      var x = d3.scaleTime().domain(cfg.x).range([m.l, W - m.r]);
+      var y = d3.scaleLinear().domain(cfg.y).range([H - m.b, m.t]);
+      var yt = y.ticks(narrow ? 4 : 6);
+      var g = svg.append("g");
+      g.selectAll(".grid").data(yt).join("line").attr("class", "grid").attr("x1", m.l).attr("x2", W - m.r).attr("y1", function(d){ return y(d); }).attr("y2", function(d){ return y(d); });
+      g.selectAll(".yl").data(yt).join("text").attr("class", "axis-t").attr("x", m.l - 7).attr("y", function(d){ return y(d); }).attr("dy", "0.32em").attr("text-anchor", "end").text(cfg.yFmt);
+      var y0 = cfg.x[0].getFullYear(), y1 = cfg.x[1].getFullYear(), yrs = [];
+      for (var yy = y0; yy <= y1; yy++) yrs.push(yy);
+      var span = yrs.length, step = (narrow || cfg.compact) ? (span > 7 ? 2 : 1) : 1;
+      var tickDate = cfg.annual ? midY : function(v){ return new Date(v, 0, 1); };
+      var xt = yrs.filter(function(v){ var d = tickDate(v); return d >= cfg.x[0] && d <= cfg.x[1]; });
+      xt = xt.filter(function(v, i){ return i % step === 0; });
+      var base = cfg.y[0] < 0 ? y(0) : H - m.b;
+      g.append("line").attr("class", "baseline").attr("x1", m.l).attr("x2", W - m.r).attr("y1", base).attr("y2", base);
+      g.selectAll(".xt").data(xt).join("line").attr("class", "tick").attr("x1", function(v){ return x(tickDate(v)); }).attr("x2", function(v){ return x(tickDate(v)); }).attr("y1", H - m.b).attr("y2", H - m.b + 4);
+      g.selectAll(".xl").data(xt).join("text").attr("class", "axis-t").attr("x", function(v){ return x(tickDate(v)); }).attr("y", H - m.b + 17).attr("text-anchor", "middle")
+        .text(function(v){ return (narrow || cfg.compact) && span > 7 ? "’" + String(v).slice(2) : v; });
+
+      var nb = (cfg.bars || []).length;
+      (cfg.bars || []).forEach(function(s){
+        var period = cfg.barDays || 365;
+        var slot = (x(new Date(+cfg.x[0] + period * 864e5)) - x(cfg.x[0]));
+        var bw = Math.max(3, slot * (cfg.barFrac || 0.62) / nb - (nb > 1 ? 1 : 0));
+        var off = (s.off || 0) * (bw + 2);
+        g.selectAll(null).data(s.pts.filter(function(p){ return p.v != null; })).join("path")
+          .attr("class", "br " + s.cls)
+          .attr("d", function(p){ return barPath(x(p.d) - bw / 2 + off, y(p.v), y(Math.max(0, cfg.y[0])), bw, 3); });
+      });
+      (cfg.refs || []).forEach(function(r){
+        g.append("line").attr("class", "ref-line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(r.v)).attr("y2", y(r.v));
+        if (narrow && r.narrowHide) return;
+        g.append("text").attr("class", "ref-t").attr("x", r.atEnd ? W - m.r - 2 : (r.at ? x(r.at) : m.l + 6)).attr("y", y(r.v) + (r.dy || -6))
+          .attr("text-anchor", r.atEnd ? "end" : (r.at ? "middle" : "start")).text(narrow && r.tn ? r.tn : r.t);
+      });
+      (cfg.na || []).forEach(function(n){
+        g.append("text").attr("class", "na-t").attr("x", x(n.d)).attr("y", n.v != null ? y(n.v) : H - m.b - 6).attr("text-anchor", "middle").text(n.t);
+      });
+
+      var markers = cfg.noMarkers ? [] : [{d:REPEAL, t:(narrow || cfg.compact) ? "Repeal effective" : "Repeal takes effect, Jun 11, 2018", cls:"", row:0},
+                     {d:CA, t:(narrow || cfg.compact) ? "CA law" : "CA SB 822 enforceable, early 2021", cls:"soft", row:1}];
+      markers.forEach(function(k){
+        var ms = cfg.markerSpan || cfg.x;
+        if (k.d < ms[0] || k.d > ms[1]) return;
+        g.append("line").attr("class", "mk-line " + k.cls).attr("x1", x(k.d)).attr("x2", x(k.d)).attr("y1", k.row ? 28 : 14).attr("y2", H - m.b);
+        var tx = g.append("text").attr("class", "mk-t " + k.cls).attr("y", k.row ? 24 : 10).text(k.t);
+        var right = x(k.d) + 5, len = tx.node().getComputedTextLength ? tx.node().getComputedTextLength() : 0;
+        if (right + len > W - 2) tx.attr("x", x(k.d) - 5).attr("text-anchor", "end"); else tx.attr("x", right);
+      });
+
+      (cfg.lines || []).forEach(function(s){
+        var line = d3.line().defined(function(p){ return p.v != null; }).x(function(p){ return x(p.d); }).y(function(p){ return y(p.v); });
+        g.append("path").attr("class", "ln " + s.cls + (s.dash ? " dash" : "")).attr("d", line(s.pts));
+        if (s.dots) g.selectAll(null).data(s.pts.filter(function(p){ return p.v != null; })).join("circle").attr("class", "pt fill " + s.cls).attr("r", 3.5).attr("cx", function(p){ return x(p.d); }).attr("cy", function(p){ return y(p.v); });
+      });
+      (cfg.points || []).forEach(function(s){
+        g.selectAll(null).data(s.pts).join("circle").attr("class", "pt hollow " + s.cls).attr("r", 4.5).attr("cx", function(p){ return x(p.d); }).attr("cy", function(p){ return y(p.v); });
+      });
+      (cfg.labels || []).forEach(function(l){
+        if (narrow && l.narrowHide) return;
+        g.append("text").attr("class", "dlabel" + (l.sub ? " sub" : "")).attr("x", x(l.d) + (l.dx || 0)).attr("y", y(l.v) + ((narrow && l.ndy != null ? l.ndy : l.dy) || 0)).attr("text-anchor", l.anchor || "end").text(narrow && l.nt ? l.nt : l.t);
+      });
+
+      var hov = svg.append("g").style("display", "none");
+      var xh = hov.append("line").attr("class", "xh").attr("y1", m.t - 6).attr("y2", H - m.b);
+      var dots = hov.append("g");
+
+      function show(i){
+        if (i < 0 || i >= hoverDates.length) return;
+        idx = i;
+        var t = hoverDates[i], px = x(new Date(t));
+        hov.style("display", null);
+        xh.attr("x1", px).attr("x2", px);
+        dots.selectAll("*").remove();
+        var html = "<div class=\"tt\">" + cfg.tipTitle(new Date(t)) + "</div>";
+        keyed.forEach(function(k){
+          var p = k.m.get(t); if (!p) return;
+          if (!k.s.isBar) dots.append("circle").attr("class", "hov " + k.s.cls).attr("r", 5).attr("cx", px).attr("cy", y(p.v));
+          html += "<div class=\"tr\"><i style=\"background:var(" + k.s.colorVar + ")\"></i>" + k.s.name + "<b>" + k.s.fmt(p.v, p) + "</b></div>";
+          if (p.note) html += "<div class=\"tn\">" + p.note + "</div>";
+        });
+        tip.innerHTML = html;
+        tip.classList.add("on");
+        var tw = tip.offsetWidth, left = px + 14;
+        if (left + tw > W) left = Math.max(0, px - tw - 14);
+        tip.style.transform = "translate(" + left + "px," + (m.t) + "px)";
+      }
+      function hide(){ hov.style("display", "none"); tip.classList.remove("on"); }
+      var bis = d3.bisector(function(d){ return d; }).center;
+      svg.append("rect").attr("x", m.l).attr("y", 0).attr("width", W - m.l - m.r).attr("height", H).attr("fill", "transparent")
+        .on("pointermove", function(ev){ var px = d3.pointer(ev)[0]; show(bis(hoverDates, +x.invert(px))); })
+        .on("pointerdown", function(ev){ var px = d3.pointer(ev)[0]; show(bis(hoverDates, +x.invert(px))); })
+        .on("pointerleave", hide);
+      svg.on("keydown", function(ev){
+        if (ev.key === "ArrowRight" || ev.key === "ArrowLeft") {
+          ev.preventDefault();
+          var n = idx < 0 ? (ev.key === "ArrowRight" ? 0 : hoverDates.length - 1) : idx + (ev.key === "ArrowRight" ? 1 : -1);
+          show(Math.max(0, Math.min(hoverDates.length - 1, n)));
+        } else if (ev.key === "Escape") hide();
+      }).on("blur", hide);
+    }
+    var raf = 0, lastW = 0;
+    var ro = new ResizeObserver(function(){
+      var w = plot.clientWidth; if (w === lastW) return; lastW = w;
+      cancelAnimationFrame(raf); raf = requestAnimationFrame(draw);
+    });
+    ro.observe(plot);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ draw(); });
+  }
+
+  var colorOf = {s1:"--s1", s2:"--s2", s3:"--s3", s4:"--s4", muted:"--s-muted"};
+  /* The short page (quick.html) colors by meaning, not by slot: a series' `role` (cable, cable2, fiber, fwa,
+     accent, ctx) becomes its class and tooltip color there; quick.html's stylesheet maps roles to colors.
+     The full page ignores roles and keeps its slot classes. */
+  var SHORT = !!document.getElementById("quick-data");
+  function S(o){
+    if (SHORT && o.role) { o.cls = o.role; o.colorVar = o.colorVar || "--c-" + o.role; }
+    o.colorVar = o.colorVar || colorOf[o.cls] || "--s1"; return o;
+  }
+  var last = function(a){ return a[a.length - 1]; };
+
+  /* Chart A: speed, three licence-clean sources as indexed small multiples (first reading = 100) */
+  (function(){
+    var scope = document.getElementById("c-speed");
+    var X = [new Date(2015, 0, 1), new Date(2026, 0, 1)], Y = [0, 800];
+    function indexed(pts){ var b = pts[0].mbps; pts.forEach(function(p){ p.v = p.mbps / b * 100; }); return pts; }
+    var lvl = function(v, p){ return f1(p.mbps) + " Mbps · " + f0(Math.round(v)); };
+    var lvl0 = function(v, p){ return f0(p.mbps) + " Mbps · " + f0(Math.round(v)); };  /* plan tiers are whole Mbps */
+    var mbaD = function(y){ return new Date(y, 8, 15); };
+    var cable = indexed(DATA.speedMba.map(function(r){ return {d:mbaD(r[0]), mbps:r[1]}; }));
+    var fiber = indexed(DATA.speedMba.map(function(r){ return {d:mbaD(r[0]), mbps:r[2]}; }));
+    var tier = indexed(DATA.speedTier.map(function(r){ return {d:ym(r[0]), mbps:r[1]}; }));
+    var mlab = indexed(DATA.speedMlab.map(function(r){ return {d:midY(r[0]), mbps:r[1]}; }));
+    if (!document.getElementById("p-tier")) {  /* the quick version shows one series: FCC-measured cable speed, in Mbps */
+      var mb = DATA.speedMba.map(function(r){ return {d:mbaD(r[0]), v:r[1]}; });
+      var lm = last(mb), mbf = function(v){ return f1(v) + " Mbps"; };
+      Chart(document.getElementById("p-mba"), {
+        aria:"Line chart, FCC Measuring Broadband America measured mean download on the cable panel, September of each year " + DATA.speedMba[0][0] + " to " + last(DATA.speedMba)[0] + ": " + mbf(mb[0].v) + " to " + mbf(lm.v) + ".",
+        x:[new Date(2015, 0, 1), new Date(2023, 2, 1)], y:[0, 450], yFmt:function(v){ return v; }, h:[300, 260],
+        lines:[S({cls:"s1", role:"cable", name:"Cable, measured", pts:mb, dots:true, fmt:mbf})],
+        labels:[{d:lm.d, v:lm.v, t:mbf(lm.v), dy:-12, anchor:"end"}, {d:mb[0].d, v:mb[0].v, t:mbf(mb[0].v), dy:-12, anchor:"start"}],
+        tipTitle:function(d){ return "Sep " + d.getFullYear() + " (FCC panel)"; }
+      });
+      table(scope, ["Period", "Cable, measured (Mbps)"], DATA.speedMba.map(function(r){ return ["Sep " + r[0], f1(r[1])]; }));
+      return;
+    }
+    var common = {x:X, y:Y, yFmt:function(v){ return v; }, h:[240, 220], refs:[{v:100, t:"", narrowHide:true}], compact:true};
+    function cfg(o){
+      for (var k in common) if (!(k in o)) o[k] = common[k];
+      var ds = o.lines.reduce(function(a, l){ return a.concat(l.pts.map(function(p){ return p.d; })); }, []);
+      o.markerSpan = [d3.min(ds), d3.max(ds)];  /* draw a policy marker only where the series spans it */
+      return o;
+    }
+    function span(a){ return f1(a[0].mbps) + " to " + f1(last(a).mbps) + " Mbps"; }
+    Chart(document.getElementById("p-mba"), cfg({
+      aria:"Indexed line chart, FCC Measuring Broadband America measured mean download, September of each year " + DATA.speedMba[0][0] + " to " + last(DATA.speedMba)[0] + ". Cable panel " + span(cable) + ", index " + f0(Math.round(last(cable).v)) + "; fiber panel " + span(fiber) + ", index " + f0(Math.round(last(fiber).v)) + ".",
+      lines:[S({cls:"s1", name:"Cable", pts:cable, fmt:lvl, dots:true}), S({cls:"s3", name:"Fiber", pts:fiber, fmt:lvl, dots:true})],
+      tipTitle:function(d){ return "Sep " + d.getFullYear() + " (FCC panel)"; }
+    }));
+    Chart(document.getElementById("p-tier"), cfg({
+      aria:"Indexed line chart, FCC median subscribed download tier for residential fixed connections, " + fMonth(tier[0].d) + " to " + fMonth(last(tier).d) + ": " + f0(tier[0].mbps) + " to " + f0(last(tier).mbps) + " Mbps, index " + f0(Math.round(last(tier).v)) + ". Plan speeds, not measured.",
+      lines:[S({cls:"s2", name:"Median plan", pts:tier, fmt:lvl0, dots:true})],
+      tipTitle:function(d){ return fMonth(d); }
+    }));
+    Chart(document.getElementById("p-mlab"), cfg({
+      aria:"Indexed line chart, M-Lab NDT download tests on major wired ISP networks, annual, " + DATA.speedMlab[0][0] + " to " + last(DATA.speedMlab)[0] + ": " + span(mlab) + ", index " + f0(Math.round(last(mlab).v)) + ".",
+      lines:[S({cls:"s2", name:"M-Lab, wired ISPs", pts:mlab, fmt:lvl, dots:true})],
+      tipTitle:function(d){ return String(d.getFullYear()); }
+    }));
+    var rows = [];
+    DATA.speedMba.forEach(function(r, i){
+      rows.push(["Sep " + r[0], "FCC measured, cable", f1(r[1]), f0(Math.round(cable[i].v))]);
+      rows.push(["Sep " + r[0], "FCC measured, fiber", f1(r[2]), f0(Math.round(fiber[i].v))]);
+    });
+    DATA.speedTier.forEach(function(r, i){ rows.push([fMonth(ym(r[0])), "FCC median plan, residential", f0(r[1]), f0(Math.round(tier[i].v))]); });
+    DATA.speedMlab.forEach(function(r, i){ rows.push([String(r[0]), "M-Lab, wired ISPs", f1(r[1]), f0(Math.round(mlab[i].v))]); });
+    table(scope, ["Period", "Measure", "Mbps", "Index (first = 100)"], rows);
+  })();
+
+  /* Chart B: how Americans connect, plus a separate Starlink global panel */
+  (function(){
+    var scope = document.getElementById("c-connect");
+    var C = DATA.connect;
+    function col(i){ return withGaps(C.map(function(r){ return {d:ym(r[0]), v:r[i]}; }), 200); }
+    var cable = col(1), fiber = col(2), dsl = col(3), fwa = col(4), sat = col(5);
+    var carrier = DATA.carrierFwa.map(function(r){ return {d:ym(r[0]), v:r[1]}; });
+    var mf = function(v){ return f2(v) + "M"; };
+    var lc = last(cable), lf = last(fiber), lk = last(carrier);
+    Chart(scope, {
+      aria:"Line chart of US residential fixed broadband connections by technology, December 2017 to June 2025. Cable went from 61.57 to 69.25 million after peaking at 74.6 million in December 2021; fiber from 12.7 to 35.99 million; DSL and copper from 21.73 to 6.6 million; FCC-counted fixed wireless from 1.16 to 9.84 million; satellite from 1.69 to 2.91 million. Company-reported T-Mobile and Verizon fixed wireless reached 14.18 million in December 2025.",
+      x:[new Date(2017, 9, 1), new Date(2026, 2, 1)], y:[0, 80], yFmt:function(v){ return v + "M"; },
+      lines:[S({cls:"s1", role:"cable", name:"Cable", pts:cable, fmt:mf}),
+             S({cls:"s2", role:"fiber", name:"Fiber", pts:fiber, fmt:mf}),
+             S({cls:"muted", role:"ctx", name:"DSL/copper", pts:dsl, fmt:mf}),
+             S({cls:"s3", role:"fwa", name:"Fixed wireless (FCC)", pts:fwa, fmt:mf}),
+             S({cls:"s4", role:"ctx", name:"Satellite, all", pts:sat, fmt:mf}),
+             /* the short page says "company-reported" in the legend and label instead of dashing (dashed = not a measured value there) */
+             S({cls:"s3", role:"fwa", name:"FWA, T-Mobile + Verizon", pts:carrier, dash:!SHORT, fmt:mf})],
+      labels:SHORT
+        ? [{d:lc.d, v:lc.v, t:"Cable " + f2(lc.v) + "M", dy:-10},
+           {d:lf.d, v:lf.v, t:"Fiber " + f2(lf.v) + "M", dy:-10},
+           {d:lk.d, v:lk.v, t:"FWA, T-Mobile + Verizon " + f2(lk.v) + "M", nt:"T-Mo + Vz " + f2(lk.v) + "M", dy:-10},
+           /* identity label only (the two gray lines share a color); sits just right of the repeal marker */
+           {d:dsl[1].d, v:dsl[1].v, t:"DSL/copper", dx:6, dy:-10, anchor:"start"}]
+        : [{d:lc.d, v:lc.v, t:"Cable " + f2(lc.v) + "M", dy:-10},
+           {d:lf.d, v:lf.v, t:"Fiber " + f2(lf.v) + "M", dy:-10},
+           {d:lk.d, v:lk.v, t:"FWA " + f2(lk.v) + "M", dy:-10}],
+      tipTitle:function(d){ return fMonth(d); }
+    });
+    var cm = new Map(DATA.carrierFwa.map(function(r){ return [r[0], r[1]]; }));
+    var periods = Array.from(new Set(C.map(function(r){ return r[0]; }).concat(DATA.carrierFwa.map(function(r){ return r[0]; })))).sort();
+    var cmap = new Map(C.map(function(r){ return [r[0], r]; }));
+    table(scope, ["Period", "Cable", "Fiber", "DSL/copper", "Fixed wireless (FCC)", "Satellite", "Total (FCC)", "T-Mobile + Verizon FWA"],
+      periods.map(function(p){ var r = cmap.get(p); return [p].concat(r ? r.slice(1).map(f2) : [null, null, null, null, null, null], [cm.has(p) ? f2(cm.get(p)) : null]); }));
+
+    var inset = document.getElementById("p-starlink");
+    if (!inset) return;  /* the quick version has no Starlink inset */
+    var SL = DATA.starlink;
+    var filed = SL.filter(function(r){ return r[2] === "f"; }).map(function(r){ return {d:ym(r[0]), v:r[1], note:"SpaceX SEC filing"}; });
+    var posts = SL.filter(function(r){ return r[2] === "p"; }).map(function(r){ return {d:ym(r[0]), v:r[1], note:"Company post (a floor: “more than”)"}; });
+    var smf = function(v){ return f1(v) + "M"; };
+    var lsl = last(filed);
+    Chart(inset, {
+      aria:"Small chart of Starlink subscribers worldwide, December 2022 to June 2026: about 1 million in December 2022, 4.4 million in December 2024, 8.9 million in December 2025 and 12 million in June 2026. Global counts, not US.",
+      x:[new Date(2022, 8, 1), new Date(2026, 9, 1)], y:[0, 14], yFmt:function(v){ return v + "M"; },
+      h:[200, 190], top:16, noMarkers:true,
+      lines:[S({cls:"s4", name:"SEC filings", pts:filed, dots:true, fmt:smf})],
+      points:[S({cls:"s4", name:"Company post", pts:posts, fmt:smf})],
+      labels:[{d:lsl.d, v:lsl.v, t:"12M, Jun 2026", nt:"12M", dy:-10}],
+      tipTitle:function(d){ return fMonth(d); }
+    });
+    table(inset, ["Month", "Subscribers (M)", "Source type"], SL.map(function(r){ return [r[0], f1(r[1]), r[2] === "f" ? "SpaceX SEC filing" : "Company post"]; }));
+  })();
+
+  /* Chart C: net adds */
+  (function(){
+    var scope = document.getElementById("c-netadds");
+    var N = DATA.netAdds;
+    var fwa = N.map(function(r){ return {d:qDate(r[0]), v:r[1] + r[2] + r[3]}; });
+    var cab = N.map(function(r){ return {d:qDate(r[0]), v:r[4] + r[5]}; });
+    var kf = function(v){ return (v > 0 ? "+" : v < 0 ? "−" : "") + f0(Math.abs(v)) + "k"; };
+    Chart(scope, {
+      aria:"Grouped bar chart of quarterly net customer additions, 2022 to 2025. Fixed wireless from T-Mobile, Verizon and AT&T added between 532 and 1,037 thousand customers each quarter. Comcast plus Charter mostly gained customers through Q3 2023, then lost customers every quarter from Q4 2023, with the largest loss, 343 thousand, in Q2 2025.",
+      x:[new Date(2021, 11, 1), new Date(2026, 0, 15)], y:[-400, 1100], yFmt:function(v){ return v === 0 ? "0" : (v > 0 ? "+" : "−") + (Math.abs(v) >= 1000 ? d3.format(".1f")(Math.abs(v) / 1000) + "M" : f0(Math.abs(v)) + "k"); },
+      barDays:91.3, barFrac:0.8,
+      bars:[S({cls:"s3", role:"fwa", name:"Fixed wireless", pts:fwa, isBar:true, off:-0.5, fmt:kf}),
+            S({cls:"s1", role:"cable", name:"Comcast + Charter", pts:cab, isBar:true, off:0.5, fmt:kf})],
+      tipTitle:function(d){ return d.getFullYear() + " Q" + (Math.floor(d.getMonth() / 3) + 1); }
+    });
+    table(scope, ["Quarter", "T-Mobile", "Verizon", "AT&T Internet Air", "Fixed wireless total", "Comcast", "Charter", "Cable total"],
+      N.map(function(r){ return [r[0], f0(r[1]), f0(r[2]), f0(r[3]), f0(r[1] + r[2] + r[3]), f0(r[4]), f0(r[5]), f0(r[4] + r[5])]; }));
+  })();
+
+  /* Chart D: competition and prices (two panels, one x-axis) */
+  (function(){
+    var scope = document.getElementById("c-compprice");
+    var X = [new Date(2017, 3, 1), new Date(2025, 9, 1)];
+    var C = DATA.connect;
+    var pf = function(v){ return f1(v) + "%"; };
+    var chal = C.map(function(r){ return {d:ym(r[0]), v:Math.round((r[2] + r[4]) / r[6] * 1000) / 10}; });
+    var cab = C.map(function(r){ return {d:ym(r[0]), v:Math.round(r[1] / r[6] * 1000) / 10}; });
+    Chart(document.getElementById("p-share"), {
+      aria:"Line chart of shares of US residential fixed connections. Fiber plus fixed wireless rose from 14.0% in December 2017 to 36.8% in June 2025; cable went from 62.3% to 55.6%.",
+      x:X, y:[0, 80], yFmt:function(v){ return v + "%"; }, annual:true, h:[250, 230], top:30,
+      lines:[S({cls:"s3", role:"fiber", name:"Fiber + fixed wireless", pts:chal, dots:true, fmt:pf}),
+             S({cls:"s1", role:"cable", name:"Cable", pts:cab, dots:true, fmt:pf})],
+      labels:[{d:last(chal).d, v:last(chal).v, t:pf(last(chal).v), dy:-10, anchor:"middle"},
+              {d:chal[0].d, v:chal[0].v, t:pf(chal[0].v), dy:-10, anchor:"middle"},
+              {d:last(cab).d, v:last(cab).v, t:pf(last(cab).v), dy:-10, anchor:"middle"}],
+      tipTitle:function(d){ return fMonth(d); }
+    });
+
+    var A = DATA.cpiAnnual.filter(function(r){ return r[0] <= 2025; }), R = DATA.arpu;
+    function rows(co, basis){ return R.filter(function(r){ return r[0] === co && r[2] === basis; }); }
+    var legacy = rows("Comcast", "A_legacy_HSI"), restated = rows("Comcast", "B_recast_2025"), charter = rows("Charter", "A");
+    // Link Comcast's 2025 restated figure to the old basis using the 2023-24 overlap ratio.
+    var ratios = restated.filter(function(r){ return r[1] < 2025; }).map(function(r){
+      var l = legacy.filter(function(x){ return x[1] === r[1]; })[0]; return l[3] / r[3];
+    });
+    var link = d3.mean(ratios);
+    var r25 = restated.filter(function(r){ return r[1] === 2025; })[0];
+    var c0 = legacy[0][4], ch0 = charter[0][4];
+    var ix = function(v, b){ return Math.round(v / b * 1000) / 10; };
+    var cc = legacy.map(function(r){ return {d:midY(r[1]), v:ix(r[4], c0)}; });
+    var linked = {d:midY(2025), v:ix(r25[4] * link, c0), note:"Restated basis × " + f2(link) + " (2023–24 overlap)"};
+    var ccLink = [{d:last(cc).d, v:last(cc).v, skipTip:true}, {d:linked.d, v:linked.v, skipTip:true}];
+    var chp = charter.map(function(r){ return {d:midY(r[1]), v:ix(r[4], ch0)}; });
+    var cpi = A.map(function(r){ return {d:midY(r[0]), v:r[3], note:r[4] < 12 ? "CPI: 11 months (Oct missing)" : null}; });
+    var idx = function(v){ return f1(v); };
+    Chart(document.getElementById("p-price"), {
+      aria:"Line chart, after inflation, 2017 = 100. Comcast revenue per broadband customer peaked at 106.9 in 2021 and was 102.9 in 2025 on a consistent basis; Charter peaked at 107.7 in 2021 and was 101.2 in 2025; the quality-adjusted CPI for internet services fell to 85.2.",
+      x:X, y:[70, 120], yFmt:function(v){ return v; }, annual:true, h:[280, 250], top:30,
+      lines:[S({cls:"s1", role:"cable", name:"Comcast", pts:cc, dots:true, fmt:idx}),
+             S({cls:"s1", role:"cable", name:"Comcast 2025, linked", pts:ccLink, dash:true, fmt:idx}),
+             S({cls:"s2", role:"cable2", name:"Charter", pts:chp, dots:true, fmt:idx}),
+             S({cls:"s4", role:"ctx", name:"CPI internet", pts:cpi, dots:true, fmt:idx})],
+      points:[S({cls:"s1", role:"cable", name:"Comcast 2025, linked", pts:[linked], fmt:idx})],
+      refs:[{v:100, t:"", narrowHide:true}],
+      labels:[{d:linked.d, v:linked.v, t:"Comcast " + f1(linked.v), nt:f1(linked.v), dy:-10, anchor:"middle"},
+              {d:last(chp).d, v:last(chp).v, t:"Charter " + f1(last(chp).v), nt:f1(last(chp).v), dy:20, anchor:"middle"},
+              {d:last(cpi).d, v:last(cpi).v, t:"CPI " + f1(last(cpi).v), nt:f1(last(cpi).v), dy:18, anchor:"middle"}],
+      tipTitle:function(d){ return d.getFullYear() + " · 2017 = 100"; }
+    });
+    var trows = [];
+    for (var y = 2017; y <= 2025; y++) {
+      var a = A.filter(function(r){ return r[0] === y; })[0];
+      var get = function(rs, i){ var r = rs.filter(function(r){ return r[1] === y; })[0]; return r ? "$" + f2(r[i]) : null; };
+      var sh = C.filter(function(r){ return r[0] === y + "-12"; })[0];
+      trows.push([y + (a && a[4] < 12 ? "*" : ""), sh ? pf((sh[2] + sh[4]) / sh[6] * 100) : null, sh ? pf(sh[1] / sh[6] * 100) : null,
+                  a ? f1(a[3]) : null, get(legacy, 3), get(restated, 3), get(charter, 3), get(legacy, 4), get(restated, 4), get(charter, 4)]);
+    }
+    table(scope, ["Year", "Fiber + FWA share (Dec)", "Cable share (Dec)", "CPI internet, real (2017=100)", "Comcast $/mo", "Comcast restated $/mo", "Charter $/mo", "Comcast, 2017 $", "Comcast restated, 2017 $", "Charter, 2017 $"], trows);
+  })();
+
+  /* Chart E: fiber passings and capex, side by side */
+  (function(){
+    var scope = document.getElementById("c-invest");
+    var fib = DATA.fiber.map(function(r){ return {d:midY(r[0]), v:r[1], note:r[0] === 2016 ? "Approximate headline figure" : (r[0] <= 2019 ? "US homes marketed (from a North America release)" : null)}; });
+    Chart(document.getElementById("p-fiber"), {
+      aria:"Bar chart of fiber homes passed in millions: about 30 in 2016, 40.8 in 2018, rising to 98.3 in 2025. 2017 and 2020 not shown.",
+      x:[new Date(2015, 8, 1), new Date(2026, 3, 1)], y:[0, 110], yFmt:function(v){ return v + "M"; }, annual:true, compact:true, h:[300, 260],
+      bars:[S({cls:"s1", role:"fiber", name:"Fiber passed", pts:fib, isBar:true, fmt:function(v){ return f1(v) + "M"; }})],
+      na:[{d:midY(2017), t:"n/a"}, {d:midY(2020), t:"n/a"}],
+      labels:[{d:last(fib).d, v:last(fib).v, t:"98.3M", anchor:"middle", dy:-8}, {d:fib[0].d, v:fib[0].v, t:"~30M", anchor:"middle", dy:-8}],
+      tipTitle:function(d){ return String(d.getFullYear()); }
+    });
+    var nom = DATA.capex.map(function(r){ return {d:midY(r[0]), v:r[1]}; });
+    var real = DATA.capex.map(function(r){ return {d:midY(r[0]), v:r[2]}; });
+    var lr = last(real);
+    Chart(document.getElementById("p-capex"), {
+      aria:"Bar chart of USTelecom broadband capital spending, 2012 to 2025, in dollars, with a line in 2017 dollars and a reference at the 2017 level. Spending peaked at 102.4 billion dollars in 2022 and was 92.6 billion in 2025; in 2017 dollars, 2025 was 70.5 billion against 76.9 billion in 2017, and the 2018 to 2025 average was 76.4 billion.",
+      x:[new Date(2011, 8, 1), new Date(2026, 3, 1)], y:[0, 120], yFmt:function(v){ return "$" + v; }, annual:true, compact:true, h:[300, 260],
+      bars:[S({cls:"muted", role:"ctx", colorVar:"--bar-muted", name:"In dollars", pts:nom, isBar:true, fmt:function(v){ return "$" + f1(v) + "B"; }})],
+      lines:[S({cls:"s1", role:"accent", name:"2017 dollars", pts:real, dots:true, fmt:function(v){ return "$" + f1(v) + "B"; }})],
+      refs:[{v:76.9, t:"2017: $76.9B", dy:-6, atEnd:true, narrowHide:true}],
+      labels:[{d:lr.d, v:lr.v, t:"$" + f1(lr.v) + "B", dy:22, anchor:"end", dx:6}],
+      tipTitle:function(d){ return String(d.getFullYear()); }
+    });
+    var fmap = new Map(DATA.fiber.map(function(r){ return [r[0], r[1]]; }));
+    var trows = DATA.capex.map(function(r){
+      var y = r[0], fv = fmap.has(y) ? f1(fmap.get(y)) + (y === 2016 ? " (approx.)" : y <= 2019 ? " (marketed)" : "") : null;
+      return [y, f1(r[1]), f1(r[2]), fv];
+    });
+    var avg = d3.mean(DATA.capex.filter(function(r){ return r[0] >= 2018; }), function(r){ return r[2]; });
+    trows.push(["2018–25 avg", null, f1(avg), null]);
+    table(scope, ["Year", "Capex, $B", "Capex, 2017 $B", "Fiber passed (M)"], trows);
+  })();
+
+  /* Chart F: ACS adoption */
+  (function(){
+    function series(col){ return withGaps(DATA.acs.map(function(r){ return {d:midY(r[0]), v:r[col]}; }), 400); }
+    var any = series(1), fixed = series(2), cell = series(3);
+    var scope = document.getElementById("c-subsidy");
+    if (!scope) return;  /* the quick version drops Chart F */
+    Chart(scope, {
+      aria:"Line chart of the share of US households with broadband, 2016 to 2024. Any broadband rose from 81.4% to 93.2%; cable, fiber or DSL from 67.3% to 76.5%; cellular-only from 10.4% to 12.6%. 2020 not published.",
+      x:[new Date(2015, 8, 1), new Date(2025, 0, 1)], y:[0, 100], yFmt:function(v){ return v + "%"; }, annual:true, h:[260, 240],
+      lines:[S({cls:"s1", name:"Any broadband", pts:any, dots:true, fmt:function(v){ return f1(v) + "%"; }}),
+             S({cls:"s3", name:"Cable, fiber or DSL", pts:fixed, dots:true, fmt:function(v){ return f1(v) + "%"; }}),
+             S({cls:"s2", name:"Cellular only", pts:cell, dots:true, fmt:function(v){ return f1(v) + "%"; }})],
+      na:[{d:midY(2020), t:"no 2020 data", v:48}],
+      labels:[{d:last(any).d, v:last(any).v, t:f1(last(any).v) + "%", dy:-10, anchor:"middle"},
+              {d:last(fixed).d, v:last(fixed).v, t:f1(last(fixed).v) + "%", dy:-10, anchor:"middle"},
+              {d:last(cell).d, v:last(cell).v, t:f1(last(cell).v) + "%", dy:-10, anchor:"middle"}],
+      tipTitle:function(d){ return String(d.getFullYear()); }
+    });
+    table(scope, ["Year", "Any broadband %", "Cable, fiber or DSL %", "Cellular only %"], DATA.acs.map(function(r){ return [r[0], f1(r[1]), f1(r[2]), f1(r[3])]; }));
+  })();
+})();
+</script>
+<script>
+/* Claim cards: square side tag, quote, speaker, date, then excerpts of the card's
+   "What happened" text (content/quick.json) and its evidence links. build.py checks that every
+   excerpt appears verbatim in content/predictions.json. No verdict labels on this page. */
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById("nn-data").textContent);
+  var Q = JSON.parse(document.getElementById("quick-data").textContent);
+  var SIDE_TAG = {opp:"Opposed repeal", sup:"Supported repeal"};
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function excerpt(full, parts){
+    var s = parts.join(" … ");
+    if (full.indexOf(parts[0]) > 0) s = "… " + s;
+    var lastEnd = full.indexOf(parts[parts.length - 1]) + parts[parts.length - 1].length;
+    if (full.slice(lastEnd).trim()) s = s + " …";
+    return s;
+  }
+  function onPage(h){ return h.charAt(0) === "#" && !!document.getElementById(h.slice(1)); }
+  function card(p, x){
+    var a = el("article", "card " + p.side);
+    var top = el("div", "card-top");
+    top.appendChild(el("span", "tag", SIDE_TAG[p.side]));
+    a.appendChild(top);
+    var bq = el("blockquote"); bq.cite = p.url; bq.appendChild(el("p", null, excerpt(p.q, x.q))); a.appendChild(bq);
+    var who = el("p", "who");
+    who.appendChild(el("strong", null, p.who));
+    who.appendChild(document.createTextNode(" "));
+    who.appendChild(el("span", "role", p.role));
+    var meta = el("span", "meta");
+    meta.appendChild(document.createTextNode(p.date + " · "));
+    var src = el("a", null, "Original"); src.href = p.url; src.rel = "noopener"; src.target = "_blank";
+    meta.appendChild(src); who.appendChild(meta); a.appendChild(who);
+    var w = el("div", "what");
+    w.appendChild(el("h4", null, "What happened"));
+    x.why.forEach(function(t){ w.appendChild(el("p", "ex", t)); });
+    var ev = el("p", "ev"); ev.appendChild(document.createTextNode("Evidence: "));
+    /* chart links first (bold via CSS), then outside sources */
+    p.ev.slice().sort(function(a, b){ return onPage(b[1]) - onPage(a[1]); }).forEach(function(e, i){
+      if (i) ev.appendChild(document.createTextNode(" · "));
+      var l = el("a", null, e[0]), h = e[1];
+      /* a chart only the full version has: link there */
+      if (h.charAt(0) === "#" && !document.getElementById(h.slice(1))) h = "index.html" + h;
+      l.href = h;
+      if (h.charAt(0) !== "#" && h.indexOf("index.html") !== 0) { l.rel = "noopener"; l.target = "_blank"; }
+      ev.appendChild(l);
+    });
+    w.appendChild(ev); a.appendChild(w);
+    return a;
+  }
+  var box = document.getElementById("qcards");
+  /* Order follows content/quick.json (sides alternate), not the full page's grouping. */
+  var byId = {};
+  DATA.predictions.forEach(function(p){ byId[p.id] = p; });
+  Object.keys(Q).forEach(function(id){ if (id.charAt(0) !== "_" && byId[id]) box.appendChild(card(byId[id], Q[id])); });
+})();
+</script>
+</body>
+</html>
